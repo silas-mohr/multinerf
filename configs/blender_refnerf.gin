@@ -21,6 +21,7 @@ Config.lr_final = 0.000015
 Config.print_every = 5000
 Config.checkpoint_every = 10000
 Config.max_steps = 300000
+Config.print_every = 5000
 
 Model.num_levels = 2
 Model.single_mlp = True

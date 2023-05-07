@@ -1,0 +1,85 @@
+ERROR: Unable to locate a modulefile for 'nvhpc/22.5'
+Sat May  6 18:29:50 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  On   | 00000000:17:00.0 Off |                    0 |
+| N/A   27C    P0    31W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA A100-PCI...  On   | 00000000:65:00.0 Off |                    0 |
+| N/A   28C    P0    32W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/render': Is a directory
+2023-05-06 18:29:53.162199: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-06 18:29:53.162249: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-06 18:29:53.162255: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0506 18:29:56.109784 22885277517632 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA Host Interpreter
+I0506 18:29:56.110158 22885277517632 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0506 18:29:56.110232 22885277517632 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+I0506 18:30:31.184874 22885277517632 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster with prefix checkpoint_
+I0506 18:30:53.490828 22885277517632 checkpoints.py:490] Saving checkpoint at step: 1
+I0506 18:30:53.506408 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_1
+I0506 19:18:30.201684 22885277517632 checkpoints.py:490] Saving checkpoint at step: 10000
+I0506 19:18:30.228505 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_10000
+I0506 20:05:57.320761 22885277517632 checkpoints.py:490] Saving checkpoint at step: 20000
+I0506 20:05:57.340469 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_20000
+I0506 20:53:15.450904 22885277517632 checkpoints.py:490] Saving checkpoint at step: 30000
+I0506 20:53:15.469894 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_30000
+I0506 21:40:23.460561 22885277517632 checkpoints.py:490] Saving checkpoint at step: 40000
+I0506 21:40:23.478883 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_40000
+I0506 22:27:30.844481 22885277517632 checkpoints.py:490] Saving checkpoint at step: 50000
+I0506 22:27:30.888720 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_50000
+I0506 23:14:39.198270 22885277517632 checkpoints.py:490] Saving checkpoint at step: 60000
+I0506 23:14:39.229211 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_60000
+I0507 00:01:47.310029 22885277517632 checkpoints.py:490] Saving checkpoint at step: 70000
+I0507 00:01:47.330959 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_70000
+I0507 00:49:00.412018 22885277517632 checkpoints.py:490] Saving checkpoint at step: 80000
+I0507 00:49:00.431481 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_80000
+I0507 01:36:04.429088 22885277517632 checkpoints.py:490] Saving checkpoint at step: 90000
+I0507 01:36:04.446896 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_90000
+I0507 02:23:07.567859 22885277517632 checkpoints.py:490] Saving checkpoint at step: 100000
+I0507 02:23:07.794562 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_100000
+I0507 03:10:10.909791 22885277517632 checkpoints.py:490] Saving checkpoint at step: 110000
+I0507 03:10:10.927877 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_110000
+I0507 03:57:16.785215 22885277517632 checkpoints.py:490] Saving checkpoint at step: 120000
+I0507 03:57:16.814445 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_120000
+I0507 04:44:16.469321 22885277517632 checkpoints.py:490] Saving checkpoint at step: 130000
+I0507 04:44:16.487975 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_130000
+I0507 05:31:13.462517 22885277517632 checkpoints.py:490] Saving checkpoint at step: 140000
+I0507 05:31:13.480880 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_140000
+I0507 06:18:12.595082 22885277517632 checkpoints.py:490] Saving checkpoint at step: 150000
+I0507 06:18:12.614744 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_150000
+I0507 07:05:06.892331 22885277517632 checkpoints.py:490] Saving checkpoint at step: 160000
+I0507 07:05:06.910616 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_160000
+I0507 07:52:00.611605 22885277517632 checkpoints.py:490] Saving checkpoint at step: 170000
+I0507 07:52:00.632544 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_170000
+I0507 08:38:49.749648 22885277517632 checkpoints.py:490] Saving checkpoint at step: 180000
+I0507 08:38:49.767313 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_180000
+I0507 09:25:39.660674 22885277517632 checkpoints.py:490] Saving checkpoint at step: 190000
+I0507 09:25:39.885709 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_190000
+I0507 10:12:29.950147 22885277517632 checkpoints.py:490] Saving checkpoint at step: 200000
+I0507 10:12:29.969980 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_200000
+I0507 10:59:24.904463 22885277517632 checkpoints.py:490] Saving checkpoint at step: 210000
+I0507 10:59:24.926401 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_210000
+I0507 11:46:20.740481 22885277517632 checkpoints.py:490] Saving checkpoint at step: 220000
+I0507 11:46:20.763115 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_220000
+I0507 12:33:15.008684 22885277517632 checkpoints.py:490] Saving checkpoint at step: 230000
+I0507 12:33:15.028822 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_230000
+I0507 13:20:15.761055 22885277517632 checkpoints.py:490] Saving checkpoint at step: 240000
+I0507 13:20:15.780479 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_240000
