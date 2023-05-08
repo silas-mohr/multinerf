@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=1                    # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=16G                    # memory per cpu-core (4G is default)
 #SBATCH --gres=gpu:2                         # number of gpus per node
-#SBATCH --time=03:30:00                      # total run time limit (HH:MM:SS)
+#SBATCH --time=03:00:00                      # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin                    # send email when job begins
 #SBATCH --mail-type=end                      # send email when job ends
 #SBATCH --mail-user=smohr@princeton.edu      # address to send emails to
@@ -39,16 +39,22 @@ python -m render \
   --gin_bindings="Config.render_video_fps = 15" \
   --logtostderr
 
-SCENE=ball
-cp -r /scratch/network/smohr/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
-CHECKPOINT_DIR=/scratch/network/smohr/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
-mkdir -p ${CHECKPOINT_DIR}
-
-
-python -m render \
+python -m eval \
   --gin_configs=configs/blender_refnerf.gin \
   --gin_bindings="Config.data_dir = '${DATA_DIR}/${SCENE}'" \
   --gin_bindings="Config.checkpoint_dir = '${CHECKPOINT_DIR}'" \
-  --gin_bindings="Config.render_dir = '${CHECKPOINT_DIR}/render/'" \
-  --gin_bindings="Config.render_video_fps = 15" \
   --logtostderr
+
+# SCENE=ball
+# cp -r /scratch/network/smohr/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
+# CHECKPOINT_DIR=/scratch/network/smohr/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
+# mkdir -p ${CHECKPOINT_DIR}
+
+
+# python -m render \
+#   --gin_configs=configs/blender_refnerf.gin \
+#   --gin_bindings="Config.data_dir = '${DATA_DIR}/${SCENE}'" \
+#   --gin_bindings="Config.checkpoint_dir = '${CHECKPOINT_DIR}'" \
+#   --gin_bindings="Config.render_dir = '${CHECKPOINT_DIR}/render/'" \
+#   --gin_bindings="Config.render_video_fps = 15" \
+#   --logtostderr

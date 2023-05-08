@@ -83,3 +83,1114 @@ I0507 12:33:15.008684 22885277517632 checkpoints.py:490] Saving checkpoint at st
 I0507 12:33:15.028822 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_230000
 I0507 13:20:15.761055 22885277517632 checkpoints.py:490] Saving checkpoint at step: 240000
 I0507 13:20:15.780479 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_240000
+I0507 14:07:14.679317 22885277517632 checkpoints.py:490] Saving checkpoint at step: 250000
+I0507 14:07:14.699703 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_250000
+I0507 14:54:10.280659 22885277517632 checkpoints.py:490] Saving checkpoint at step: 260000
+I0507 14:54:10.300310 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_260000
+I0507 15:41:06.034662 22885277517632 checkpoints.py:490] Saving checkpoint at step: 270000
+I0507 15:41:06.258126 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_270000
+I0507 16:28:00.291802 22885277517632 checkpoints.py:490] Saving checkpoint at step: 280000
+I0507 16:28:00.517384 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_280000
+I0507 17:14:53.662958 22885277517632 checkpoints.py:490] Saving checkpoint at step: 290000
+I0507 17:14:53.684087 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_290000
+I0507 18:01:46.407186 22885277517632 checkpoints.py:490] Saving checkpoint at step: 300000
+I0507 18:01:46.424444 22885277517632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_300000
+Number of parameters being optimized: 713230
+      1/300000: loss=0.10612, psnr=10.169, lr=1.96e-06 | data=0.10580, orie=2.1e-06, pred=0.00032, 2080565 r/s
+   5000/300000: loss=0.03258, psnr=15.893, lr=1.44e-04 | data=0.03236, orie=5.5e-05, pred=0.00016, 34078 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 5000: 17.370s., 36844 rays/sec
+Metrics computed in 1.570s
+psnr = 12.2824
+ssim = 0.2270
+Visualized in 13.178s
+  10000/300000: loss=0.01474, psnr=18.949, lr=1.39e-04 | data=0.01458, orie=8.4e-06, pred=0.00015, 34104 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 10000: 8.511s., 75195 rays/sec
+Metrics computed in 0.004s
+psnr = 12.3910
+ssim = 0.2366
+Visualized in 0.613s
+  15000/300000: loss=0.01083, psnr=20.300, lr=1.34e-04 | data=0.01067, orie=6.7e-06, pred=0.00015, 34275 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 15000: 8.579s., 74603 rays/sec
+Metrics computed in 0.005s
+psnr = 12.3613
+ssim = 0.2363
+Visualized in 0.640s
+  20000/300000: loss=0.00879, psnr=21.236, lr=1.29e-04 | data=0.00863, orie=5.6e-06, pred=0.00015, 34121 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 20000: 8.532s., 75011 rays/sec
+Metrics computed in 0.004s
+psnr = 12.3707
+ssim = 0.2397
+Visualized in 0.603s
+  25000/300000: loss=0.00748, psnr=21.964, lr=1.24e-04 | data=0.00733, orie=5.7e-06, pred=0.00015, 34251 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 25000: 8.520s., 75118 rays/sec
+Metrics computed in 0.004s
+psnr = 12.2316
+ssim = 0.2379
+Visualized in 0.617s
+  30000/300000: loss=0.00657, psnr=22.552, lr=1.19e-04 | data=0.00641, orie=5.4e-06, pred=0.00015, 34148 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 30000: 8.528s., 75045 rays/sec
+Metrics computed in 0.004s
+psnr = 12.0363
+ssim = 0.2358
+Visualized in 0.604s
+  35000/300000: loss=0.00589, psnr=23.039, lr=1.15e-04 | data=0.00574, orie=4.7e-06, pred=0.00015, 34304 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 35000: 8.542s., 74920 rays/sec
+Metrics computed in 0.003s
+psnr = 11.8555
+ssim = 0.2314
+Visualized in 0.601s
+  40000/300000: loss=0.00535, psnr=23.477, lr=1.10e-04 | data=0.00520, orie=5.1e-06, pred=0.00015, 34173 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 40000: 8.556s., 74801 rays/sec
+Metrics computed in 0.004s
+psnr = 11.7043
+ssim = 0.2267
+Visualized in 0.627s
+  45000/300000: loss=0.00492, psnr=23.862, lr=1.06e-04 | data=0.00477, orie=4.7e-06, pred=0.00015, 34327 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 45000: 8.532s., 75013 rays/sec
+Metrics computed in 0.004s
+psnr = 11.6774
+ssim = 0.2245
+Visualized in 0.599s
+  50000/300000: loss=0.00459, psnr=24.186, lr=1.02e-04 | data=0.00444, orie=4.7e-06, pred=0.00015, 34119 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 50000: 8.503s., 75271 rays/sec
+Metrics computed in 0.003s
+psnr = 11.7054
+ssim = 0.2251
+Visualized in 0.610s
+  55000/300000: loss=0.00423, psnr=24.559, lr=9.83e-05 | data=0.00408, orie=4.3e-06, pred=0.00015, 34236 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 55000: 8.556s., 74804 rays/sec
+Metrics computed in 0.004s
+psnr = 11.7272
+ssim = 0.2297
+Visualized in 0.594s
+  60000/300000: loss=0.00398, psnr=24.841, lr=9.46e-05 | data=0.00383, orie=5.0e-06, pred=0.00015, 34194 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 60000: 8.539s., 74953 rays/sec
+Metrics computed in 0.004s
+psnr = 11.8266
+ssim = 0.2306
+Visualized in 0.615s
+  65000/300000: loss=0.00374, psnr=25.137, lr=9.11e-05 | data=0.00359, orie=4.8e-06, pred=0.00014, 34337 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 65000: 8.512s., 75184 rays/sec
+Metrics computed in 0.003s
+psnr = 11.9590
+ssim = 0.2362
+Visualized in 0.597s
+  70000/300000: loss=0.00354, psnr=25.390, lr=8.77e-05 | data=0.00339, orie=4.5e-06, pred=0.00014, 34060 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 70000: 8.522s., 75100 rays/sec
+Metrics computed in 0.004s
+psnr = 12.0248
+ssim = 0.2413
+Visualized in 0.617s
+  75000/300000: loss=0.00338, psnr=25.609, lr=8.44e-05 | data=0.00323, orie=4.6e-06, pred=0.00014, 34154 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 75000: 8.494s., 75345 rays/sec
+Metrics computed in 0.004s
+psnr = 12.0898
+ssim = 0.2421
+Visualized in 0.604s
+  80000/300000: loss=0.00322, psnr=25.824, lr=8.12e-05 | data=0.00307, orie=4.2e-06, pred=0.00014, 34040 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 80000: 8.518s., 75135 rays/sec
+Metrics computed in 0.004s
+psnr = 12.1836
+ssim = 0.2409
+Visualized in 0.595s
+  85000/300000: loss=0.00306, psnr=26.079, lr=7.81e-05 | data=0.00291, orie=4.4e-06, pred=0.00014, 34156 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 85000: 8.512s., 75186 rays/sec
+Metrics computed in 0.004s
+psnr = 12.2208
+ssim = 0.2381
+Visualized in 0.593s
+  90000/300000: loss=0.00295, psnr=26.242, lr=7.52e-05 | data=0.00280, orie=4.4e-06, pred=0.00014, 34067 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 90000: 8.483s., 75441 rays/sec
+Metrics computed in 0.004s
+psnr = 12.2372
+ssim = 0.2336
+Visualized in 0.598s
+  95000/300000: loss=0.00283, psnr=26.436, lr=7.23e-05 | data=0.00269, orie=4.5e-06, pred=0.00014, 34188 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 95000: 8.503s., 75265 rays/sec
+Metrics computed in 0.004s
+psnr = 12.2005
+ssim = 0.2347
+Visualized in 0.599s
+ 100000/300000: loss=0.00273, psnr=26.606, lr=6.96e-05 | data=0.00259, orie=3.9e-06, pred=0.00014, 34044 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 100000: 8.506s., 75242 rays/sec
+Metrics computed in 0.004s
+psnr = 12.1413
+ssim = 0.2306
+Visualized in 0.593s
+ 105000/300000: loss=0.00262, psnr=26.796, lr=6.70e-05 | data=0.00248, orie=4.5e-06, pred=0.00014, 34189 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 105000: 8.525s., 75072 rays/sec
+Metrics computed in 0.004s
+psnr = 12.0792
+ssim = 0.2285
+Visualized in 0.588s
+ 110000/300000: loss=0.00258, psnr=26.874, lr=6.45e-05 | data=0.00244, orie=4.3e-06, pred=0.00014, 34042 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 110000: 8.509s., 75212 rays/sec
+Metrics computed in 0.004s
+psnr = 12.0106
+ssim = 0.2250
+Visualized in 0.607s
+ 115000/300000: loss=0.00250, psnr=27.036, lr=6.21e-05 | data=0.00235, orie=4.2e-06, pred=0.00014, 34160 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 115000: 8.514s., 75175 rays/sec
+Metrics computed in 0.004s
+psnr = 11.9306
+ssim = 0.2227
+Visualized in 0.597s
+ 120000/300000: loss=0.00243, psnr=27.176, lr=5.97e-05 | data=0.00228, orie=3.8e-06, pred=0.00014, 34041 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 120000: 8.523s., 75093 rays/sec
+Metrics computed in 0.005s
+psnr = 11.8715
+ssim = 0.2236
+Visualized in 0.604s
+ 125000/300000: loss=0.00238, psnr=27.274, lr=5.75e-05 | data=0.00223, orie=4.2e-06, pred=0.00014, 34173 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 125000: 8.513s., 75178 rays/sec
+Metrics computed in 0.004s
+psnr = 11.8263
+ssim = 0.2193
+Visualized in 0.601s
+ 130000/300000: loss=0.00231, psnr=27.417, lr=5.53e-05 | data=0.00216, orie=3.8e-06, pred=0.00014, 34064 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 130000: 8.513s., 75180 rays/sec
+Metrics computed in 0.004s
+psnr = 11.8619
+ssim = 0.2187
+Visualized in 0.592s
+ 135000/300000: loss=0.00226, psnr=27.532, lr=5.32e-05 | data=0.00211, orie=4.1e-06, pred=0.00014, 34177 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 135000: 8.480s., 75475 rays/sec
+Metrics computed in 0.004s
+psnr = 11.9819
+ssim = 0.2217
+Visualized in 0.588s
+ 140000/300000: loss=0.00221, psnr=27.613, lr=5.12e-05 | data=0.00207, orie=3.7e-06, pred=0.00014, 34051 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 140000: 8.469s., 75569 rays/sec
+Metrics computed in 0.004s
+psnr = 12.1280
+ssim = 0.2244
+Visualized in 0.592s
+ 145000/300000: loss=0.00216, psnr=27.734, lr=4.93e-05 | data=0.00202, orie=4.0e-06, pred=0.00014, 34178 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 145000: 8.501s., 75282 rays/sec
+Metrics computed in 0.004s
+psnr = 12.2276
+ssim = 0.2227
+Visualized in 0.584s
+ 150000/300000: loss=0.00211, psnr=27.861, lr=4.74e-05 | data=0.00196, orie=3.9e-06, pred=0.00014, 34050 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 150000: 8.462s., 75635 rays/sec
+Metrics computed in 0.004s
+psnr = 12.3794
+ssim = 0.2249
+Visualized in 0.594s
+ 155000/300000: loss=0.00206, psnr=27.967, lr=4.56e-05 | data=0.00192, orie=3.6e-06, pred=0.00014, 34309 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 155000: 8.456s., 75682 rays/sec
+Metrics computed in 0.003s
+psnr = 12.5272
+ssim = 0.2274
+Visualized in 0.586s
+ 160000/300000: loss=0.00205, psnr=28.003, lr=4.39e-05 | data=0.00190, orie=4.0e-06, pred=0.00014, 34046 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 160000: 8.471s., 75551 rays/sec
+Metrics computed in 0.005s
+psnr = 12.6522
+ssim = 0.2304
+Visualized in 0.595s
+ 165000/300000: loss=0.00201, psnr=28.087, lr=4.23e-05 | data=0.00187, orie=3.9e-06, pred=0.00014, 34168 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 165000: 8.514s., 75167 rays/sec
+Metrics computed in 0.004s
+psnr = 12.6369
+ssim = 0.2330
+Visualized in 0.588s
+ 170000/300000: loss=0.00198, psnr=28.171, lr=4.07e-05 | data=0.00183, orie=4.2e-06, pred=0.00014, 34201 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 170000: 8.481s., 75465 rays/sec
+Metrics computed in 0.005s
+psnr = 12.5551
+ssim = 0.2317
+Visualized in 0.593s
+ 175000/300000: loss=0.00194, psnr=28.270, lr=3.92e-05 | data=0.00180, orie=4.0e-06, pred=0.00014, 34323 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 175000: 8.519s., 75125 rays/sec
+Metrics computed in 0.005s
+psnr = 12.5104
+ssim = 0.2328
+Visualized in 0.591s
+ 180000/300000: loss=0.00192, psnr=28.311, lr=3.77e-05 | data=0.00178, orie=3.9e-06, pred=0.00014, 34199 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 180000: 8.493s., 75356 rays/sec
+Metrics computed in 0.004s
+psnr = 12.4424
+ssim = 0.2287
+Visualized in 0.585s
+ 185000/300000: loss=0.00189, psnr=28.402, lr=3.63e-05 | data=0.00174, orie=3.8e-06, pred=0.00014, 34319 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 185000: 8.492s., 75362 rays/sec
+Metrics computed in 0.004s
+psnr = 12.3393
+ssim = 0.2252
+Visualized in 0.587s
+ 190000/300000: loss=0.00186, psnr=28.482, lr=3.49e-05 | data=0.00171, orie=3.7e-06, pred=0.00014, 34194 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 190000: 8.471s., 75556 rays/sec
+Metrics computed in 0.004s
+psnr = 12.2470
+ssim = 0.2215
+Visualized in 0.582s
+ 195000/300000: loss=0.00185, psnr=28.512, lr=3.36e-05 | data=0.00170, orie=3.9e-06, pred=0.00014, 34317 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 195000: 8.477s., 75497 rays/sec
+Metrics computed in 0.004s
+psnr = 12.2512
+ssim = 0.2249
+Visualized in 0.589s
+ 200000/300000: loss=0.00181, psnr=28.614, lr=3.23e-05 | data=0.00167, orie=3.6e-06, pred=0.00014, 34195 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 200000: 8.440s., 75827 rays/sec
+Metrics computed in 0.005s
+psnr = 12.2686
+ssim = 0.2271
+Visualized in 0.587s
+ 205000/300000: loss=0.00181, psnr=28.599, lr=3.11e-05 | data=0.00167, orie=3.7e-06, pred=0.00014, 34319 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 205000: 8.518s., 75133 rays/sec
+Metrics computed in 0.003s
+psnr = 12.2809
+ssim = 0.2273
+Visualized in 0.583s
+ 210000/300000: loss=0.00178, psnr=28.675, lr=2.99e-05 | data=0.00164, orie=3.7e-06, pred=0.00014, 34096 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 210000: 8.469s., 75565 rays/sec
+Metrics computed in 0.005s
+psnr = 12.2718
+ssim = 0.2253
+Visualized in 0.584s
+ 215000/300000: loss=0.00176, psnr=28.748, lr=2.88e-05 | data=0.00162, orie=4.0e-06, pred=0.00014, 34190 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 215000: 8.484s., 75437 rays/sec
+Metrics computed in 0.004s
+psnr = 12.3440
+ssim = 0.2279
+Visualized in 0.580s
+ 220000/300000: loss=0.00174, psnr=28.789, lr=2.77e-05 | data=0.00160, orie=3.8e-06, pred=0.00014, 34176 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 220000: 8.488s., 75404 rays/sec
+Metrics computed in 0.004s
+psnr = 12.4707
+ssim = 0.2321
+Visualized in 0.579s
+ 225000/300000: loss=0.00173, psnr=28.849, lr=2.67e-05 | data=0.00158, orie=3.5e-06, pred=0.00014, 34234 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 225000: 8.434s., 75884 rays/sec
+Metrics computed in 0.005s
+psnr = 12.6039
+ssim = 0.2368
+Visualized in 0.577s
+ 230000/300000: loss=0.00171, psnr=28.881, lr=2.57e-05 | data=0.00157, orie=3.5e-06, pred=0.00014, 34162 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 230000: 8.470s., 75558 rays/sec
+Metrics computed in 0.004s
+psnr = 12.6434
+ssim = 0.2381
+Visualized in 0.581s
+ 235000/300000: loss=0.00171, psnr=28.902, lr=2.47e-05 | data=0.00156, orie=3.4e-06, pred=0.00014, 34216 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 235000: 8.492s., 75368 rays/sec
+Metrics computed in 0.005s
+psnr = 12.7469
+ssim = 0.2475
+Visualized in 0.584s
+ 240000/300000: loss=0.00168, psnr=28.981, lr=2.38e-05 | data=0.00154, orie=3.3e-06, pred=0.00014, 34051 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 240000: 8.488s., 75400 rays/sec
+Metrics computed in 0.004s
+psnr = 12.8912
+ssim = 0.2517
+Visualized in 0.598s
+ 245000/300000: loss=0.00168, psnr=28.989, lr=2.29e-05 | data=0.00154, orie=3.5e-06, pred=0.00014, 34286 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 245000: 8.520s., 75121 rays/sec
+Metrics computed in 0.004s
+psnr = 12.8888
+ssim = 0.2538
+Visualized in 0.593s
+ 250000/300000: loss=0.00166, psnr=29.035, lr=2.20e-05 | data=0.00152, orie=3.5e-06, pred=0.00014, 34066 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 250000: 8.534s., 74993 rays/sec
+Metrics computed in 0.005s
+psnr = 12.9943
+ssim = 0.2568
+Visualized in 0.598s
+ 255000/300000: loss=0.00165, psnr=29.076, lr=2.12e-05 | data=0.00151, orie=3.3e-06, pred=0.00014, 34286 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 255000: 8.545s., 74898 rays/sec
+Metrics computed in 0.004s
+psnr = 12.9319
+ssim = 0.2556
+Visualized in 0.588s
+ 260000/300000: loss=0.00164, psnr=29.106, lr=2.04e-05 | data=0.00150, orie=3.9e-06, pred=0.00014, 34162 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 260000: 8.490s., 75379 rays/sec
+Metrics computed in 0.005s
+psnr = 12.9660
+ssim = 0.2539
+Visualized in 0.589s
+ 265000/300000: loss=0.00162, psnr=29.143, lr=1.96e-05 | data=0.00148, orie=3.8e-06, pred=0.00014, 34289 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 265000: 8.482s., 75450 rays/sec
+Metrics computed in 0.004s
+psnr = 13.0276
+ssim = 0.2561
+Visualized in 0.598s
+ 270000/300000: loss=0.00161, psnr=29.185, lr=1.89e-05 | data=0.00147, orie=3.7e-06, pred=0.00014, 34166 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 270000: 8.449s., 75750 rays/sec
+Metrics computed in 0.004s
+psnr = 13.0045
+ssim = 0.2575
+Visualized in 0.586s
+ 275000/300000: loss=0.00160, psnr=29.216, lr=1.82e-05 | data=0.00146, orie=3.5e-06, pred=0.00014, 34289 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 275000: 8.511s., 75193 rays/sec
+Metrics computed in 0.005s
+psnr = 12.9321
+ssim = 0.2580
+Visualized in 0.590s
+ 280000/300000: loss=0.00159, psnr=29.240, lr=1.75e-05 | data=0.00145, orie=3.4e-06, pred=0.00014, 34167 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 280000: 8.448s., 75759 rays/sec
+Metrics computed in 0.003s
+psnr = 12.7093
+ssim = 0.2547
+Visualized in 0.584s
+ 285000/300000: loss=0.00158, psnr=29.282, lr=1.68e-05 | data=0.00144, orie=3.5e-06, pred=0.00014, 34290 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 285000: 8.512s., 75188 rays/sec
+Metrics computed in 0.004s
+psnr = 12.6082
+ssim = 0.2475
+Visualized in 0.595s
+ 290000/300000: loss=0.00158, psnr=29.293, lr=1.62e-05 | data=0.00144, orie=4.0e-06, pred=0.00014, 34178 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 290000: 8.455s., 75694 rays/sec
+Metrics computed in 0.003s
+psnr = 12.4987
+ssim = 0.2395
+Visualized in 0.582s
+ 295000/300000: loss=0.00156, psnr=29.353, lr=1.56e-05 | data=0.00142, orie=3.3e-06, pred=0.00014, 34309 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 295000: 8.486s., 75415 rays/sec
+Metrics computed in 0.004s
+psnr = 12.4610
+ssim = 0.2303
+Visualized in 0.594s
+ 300000/300000: loss=0.00157, psnr=29.317, lr=1.50e-05 | data=0.00143, orie=3.5e-06, pred=0.00014, 34178 r/s
+Rendering chunk 0/78
+Rendering chunk 7/78
+Rendering chunk 14/78
+Rendering chunk 21/78
+Rendering chunk 28/78
+Rendering chunk 35/78
+Rendering chunk 42/78
+Rendering chunk 49/78
+Rendering chunk 56/78
+Rendering chunk 63/78
+Rendering chunk 70/78
+Rendering chunk 77/78
+Eval 300000: 8.450s., 75740 rays/sec
+Metrics computed in 0.005s
+psnr = 12.3489
+ssim = 0.2238
+Visualized in 0.593s
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/render': Is a directory
+Traceback (most recent call last):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 22, in <module>
+    import flax
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/__init__.py", line 22, in <module>
+    from . import core
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/__init__.py", line 31, in <module>
+    from .scope import (
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/scope.py", line 29, in <module>
+    from flax import struct
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/struct.py", line 24, in <module>
+    from typing_extensions import dataclass_transform  # pytype: disable=not-supported-yet
+ModuleNotFoundError: No module named 'typing_extensions'

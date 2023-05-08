@@ -1,9 +1,12 @@
 # -----------------------------------------------------------
 #
-#    JAX implementation
+#    JAX implementation of ABLE-NeRF LE transformer
 #
 # -----------------------------------------------------------
+
 from typing import Any
+import jax
+import jax.numpy as jnp
 from flax import linen as nn
 import gin
 
@@ -38,7 +41,6 @@ class EncoderBlock(nn.Module):
         return x, weights
 
 
-@gin.configurable
 class LETransformer(nn.Module):
     dim: int = 256
     ff_ratio: int = 2
@@ -73,3 +75,35 @@ class LETransformer(nn.Module):
         )(class_token.unsqueeze(1), x)
 
         return x
+
+
+@gin.configurable
+class LearnedEmbeddings(nn.Module):
+    weight_init: str = "he_uniform"
+    num_light_probes: int = 100
+    lp_dim: int = 256
+    ff_ratio: int = 2
+    dropout: float = 0.0
+    lp_atten_layer: int = 2
+
+    def setup(self):
+        self.light_probes = self.param(
+            "LE",
+            getattr(jax.nn.initializers, self.weight_init)(),
+            jnp.randn(1, self.num_light_probes, self.lp_dim),
+        )
+
+        dir_L_bands = 4
+        # self.fourier_dir_emb = Embedding(3, dir_L_bands)
+        self.in_channels_dir = dir_L_bands * 3 * 2 + 3
+
+    def __call__(self, tokens):
+        spec_color = LETransformer(
+            dim=self.lp_dim,
+            ff_ratio=self.ff_ratio,
+            dropout=self.dropout,
+            lp_atten_layer=self.lp_atten_layer,
+        )(tokens=tokens, light_probes=self.light_probes, class_token=class_token,)
+        spec_color = nn.Sequential(
+            nn.Dense(self.lp_dim), nn.relu, nn.Dense(3), nn.sigmoid
+        )(spec_color)

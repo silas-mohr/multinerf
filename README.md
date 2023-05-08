@@ -16,7 +16,7 @@ This implementation is written in [JAX](https://github.com/google/jax), and
 is a fork of [mip-NeRF](https://github.com/google/mipnerf).
 This is research code, and should be treated accordingly.
 
-## Setup
+## Setup on Princeton's Adroit Cluster
 
 ```
 # Clone the repo.
@@ -24,14 +24,16 @@ git clone https://github.com/google-research/multinerf.git
 cd multinerf
 
 # Make a conda environment.
-conda create --name multinerf python=3.9
-conda activate multinerf
+conda clean --all  # Make sure that the conda environment doesn't go over the HEAD node's storage limit
+conda create -p /scratch/network/$USER/multinerf-env python=3.9
+conda activate /scratch/network/smohr/multinerf-env/
 
 # Prepare pip.
-conda install pip
 pip install --upgrade pip
 
 # Install requirements.
+pip install "jax[cuda11_cudnn82]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html --no-cache-dir
+pip install tensorflow==2.11 --no-cache-dir
 pip install -r requirements.txt
 
 # Manually install rmbrualla's `pycolmap` (don't use pip's! It's different).
@@ -40,7 +42,6 @@ git clone https://github.com/rmbrualla/pycolmap.git ./internal/pycolmap
 # Confirm that all the unit tests pass.
 ./scripts/run_all_unit_tests.sh
 ```
-You'll probably also need to update your JAX installation to support GPUs or TPUs.
 
 ## Running
 
