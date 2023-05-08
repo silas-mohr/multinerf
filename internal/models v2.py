@@ -466,15 +466,16 @@ class MLP(nn.Module):
                 # Concatenate bottleneck, directional encoding, and GLO.
                 x = jnp.concatenate(x, axis=-1)
 
-                # Output of the second part of MLP. i.e. the directional MLP --> this is where I want to add a transformer
-                inputs = x
-                for i in range(self.net_depth_viewdirs):
-                    x = dense_layer(self.net_width_viewdirs)(x)
-                    x = self.net_activation(x)
-                    if i % self.skip_layer_dir == 0 and i > 0:
-                        x = jnp.concatenate([x, inputs], axis=-1)
-                
-                le_transformer = transformers.LearnedEmbeddings()(x)
+                # Output of the second part of MLP. i.e. the directional MLP
+                # inputs = x
+                # for i in range(self.net_depth_viewdirs):
+                #     x = dense_layer(self.net_width_viewdirs)(x)
+                #     x = self.net_activation(x)
+                #     if i % self.skip_layer_dir == 0 and i > 0:
+                #         x = jnp.concatenate([x, inputs], axis=-1)
+
+                # Added a transformer block instead of directional MLP
+                x = transformers.LearnedEmbeddings()(x, viewdirs[..., None, :])
 
             # If using diffuse/specular colors, then `rgb` is treated as linear
             # specular color. Otherwise it's treated as the color itself.

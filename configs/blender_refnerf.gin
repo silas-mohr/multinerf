@@ -51,4 +51,4 @@ NerfMLP.bottleneck_width = 128
 NerfMLP.density_bias = 0.5
 NerfMLP.max_deg_point = 16
 
-LearnedEmbeddings.lp_dim = 256  # This is the default, just making sure it is configurable
+# LearnedEmbeddings.lp_dim = 256  # This is the default, just making sure it is configurable

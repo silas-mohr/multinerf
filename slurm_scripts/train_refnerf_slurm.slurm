@@ -13,7 +13,7 @@
 #SBATCH --constraint=a100                    # constrain to only use A100
 
 module purge
-module load anaconda3/2022.5 cudatoolkit/11.7 cudnn/cuda-11.5/8.3.2 nvhpc/22.5
+module load anaconda3/2022.5 cudatoolkit/11.7 cudnn/cuda-11.5/8.3.2
 conda activate /scratch/network/smohr/multinerf-env
 
 nvidia-smi

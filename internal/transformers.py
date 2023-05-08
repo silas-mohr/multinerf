@@ -4,7 +4,9 @@
 #
 # -----------------------------------------------------------
 
+import functools
 from typing import Any
+
 import jax
 import jax.numpy as jnp
 from flax import linen as nn
@@ -12,6 +14,7 @@ import gin
 
 
 class EncoderBlock(nn.Module):
+    weight_init: str = "he_uniform"
     input_dim: int = 256  # Input dimension is needed here since it is equal to the output dimension (residual connection)
     num_heads: int = 8  # input_dim=256, num_heads=8, ff_ratio=3, dropout_p=0.0
     ff_ratio: int = 2  # Feed forward ratio
@@ -22,6 +25,9 @@ class EncoderBlock(nn.Module):
 
     @nn.compact
     def __call__(self, x, mask=None, train=True):
+        dense_layer = functools.partial(
+            nn.Dense, kernel_init=getattr(jax.nn.initializers, self.weight_init)()
+        )
         attn_out, weights = self.self_attn = nn.MultiHeadDotProductAttention(
             embed_dim=self.input_dim,
             num_heads=self.num_heads,
@@ -30,10 +36,10 @@ class EncoderBlock(nn.Module):
         x = nn.LayerNorm()(x + attn_out)
 
         linear_out = nn.Sequential(
-            nn.Dense(self.dim_feedforward),
+            dense_layer(self.dim_feedforward),
             nn.gelu,
             nn.Dropout(self.dropout_prob, deterministic=not train),
-            nn.Dense(self.input_dim),
+            dense_layer(self.input_dim),
         )(x)
         linear_out = nn.Dropout(self.dropout_prob)(linear_out)
         x = nn.LayerNorm()(linear_out + x)
@@ -85,6 +91,7 @@ class LearnedEmbeddings(nn.Module):
     ff_ratio: int = 2
     dropout: float = 0.0
     lp_atten_layer: int = 2
+    dir_L_bands: int = 4
 
     def setup(self):
         self.light_probes = self.param(
@@ -93,17 +100,25 @@ class LearnedEmbeddings(nn.Module):
             jnp.randn(1, self.num_light_probes, self.lp_dim),
         )
 
-        dir_L_bands = 4
         # self.fourier_dir_emb = Embedding(3, dir_L_bands)
-        self.in_channels_dir = dir_L_bands * 3 * 2 + 3
+        self.in_channels_dir = self.dir_L_bands * 3 * 2 + 3
 
-    def __call__(self, tokens):
+    def __call__(self, tokens, viewdirs):
+        dense_layer = functools.partial(
+            nn.Dense, kernel_init=getattr(jax.nn.initializers, self.weight_init)()
+        )
+        view_token = nn.Embed(self.in_channels_dir)(viewdirs)
+        view_token = dense_layer(self.lp_dim)(view_token)
         spec_color = LETransformer(
             dim=self.lp_dim,
             ff_ratio=self.ff_ratio,
             dropout=self.dropout,
             lp_atten_layer=self.lp_atten_layer,
-        )(tokens=tokens, light_probes=self.light_probes, class_token=class_token,)
+        )(
+            tokens=tokens,
+            light_probes=self.light_probes,
+            class_token=view_token,
+        )
         spec_color = nn.Sequential(
-            nn.Dense(self.lp_dim), nn.relu, nn.Dense(3), nn.sigmoid
+            dense_layer(self.lp_dim), nn.relu, dense_layer(3), nn.sigmoid
         )(spec_color)
