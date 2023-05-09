@@ -14,13 +14,13 @@ Config.predicted_normal_coarse_loss_mult = 3e-5
 Config.interlevel_loss_mult = 0.0
 Config.data_coarse_loss_mult = 0.1
 Config.adam_eps = 1e-8
-Config.batch_size = 4096
-Config.render_chunk_size = 4096
-Config.lr_init = 0.00017
-Config.lr_final = 0.000017
+Config.batch_size = 8192
+Config.render_chunk_size = 8192
+Config.lr_init = 0.00015
+Config.lr_final = 0.000015
 Config.print_every = 5000
 Config.checkpoint_every = 10000
-Config.max_steps = 350000
+Config.max_steps = 50000
 
 Model.num_levels = 2
 Model.single_mlp = True
@@ -49,7 +49,6 @@ NerfMLP.use_n_dot_v = True
 NerfMLP.bottleneck_width = 128
 NerfMLP.density_bias = 0.5
 NerfMLP.max_deg_point = 16
-NerfMLP.use_transformers = True
 
 LearnedEmbeddings.num_light_probes = 128  # Should match net_width_viewdirs, 128 is default
 LearnedEmbeddings.lp_dim = 128
