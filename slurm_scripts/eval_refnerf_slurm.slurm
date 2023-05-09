@@ -13,7 +13,7 @@
 
 module purge
 module load anaconda3/2022.5 cudatoolkit/11.7 cudnn/cuda-11.5/8.3.2
-conda activate /scratch/network/smohr/multinerf-env
+conda activate /scratch/network/"${USER}"/multinerf-env
 
 nvidia-smi
 
@@ -26,8 +26,8 @@ SCENE=toaster
 EXPERIMENT=shinyblender
 DATA_DIR="/tmp/ref-nerf/data"  # create a name for the directory
 mkdir -p ${DATA_DIR}           # make the directory
-cp -r /scratch/network/smohr/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
-CHECKPOINT_DIR=/scratch/network/smohr/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
+cp -r /scratch/network/"${USER}"/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
+CHECKPOINT_DIR=/scratch/network/"${USER}"/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
 mkdir -p ${CHECKPOINT_DIR}
 
 python -m eval \
@@ -38,8 +38,8 @@ python -m eval \
 
 
 SCENE=ball
-cp -r /scratch/network/smohr/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
-CHECKPOINT_DIR=/scratch/network/smohr/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
+cp -r /scratch/network/"${USER}"/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
+CHECKPOINT_DIR=/scratch/network/"${USER}"/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
 mkdir -p ${CHECKPOINT_DIR}
 
 python -m eval \
