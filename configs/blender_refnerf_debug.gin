@@ -19,7 +19,8 @@ Config.render_chunk_size = 1024
 Config.lr_init = 0.00015
 Config.lr_final = 0.000015
 Config.print_every = 100
-Config.early_exit_steps = 3000
+Config.early_exit_steps = 1000
+Config.checkpoint_every = 250
 Config.lr_delay_mult = 0.1
 Config.lr_delay_steps = 500
 
@@ -50,5 +51,7 @@ NerfMLP.use_n_dot_v = True
 NerfMLP.bottleneck_width = 128
 NerfMLP.density_bias = 0.5
 NerfMLP.max_deg_point = 16
+NerfMLP.use_transformers = True
 
-# LearnedEmbeddings.lp_dim = 256  # This is the default, just making sure it is configurable
+LearnedEmbeddings.num_light_probes = 128  # Should match net_width_viewdirs
+LearnedEmbeddings.lp_dim = 128
