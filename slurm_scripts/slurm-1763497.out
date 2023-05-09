@@ -1,5 +1,4 @@
-ERROR: Unable to locate a modulefile for 'nvhpc/22.5'
-Mon May  8 02:52:10 2023       
+Mon May  8 15:39:13 2023       
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
 |-------------------------------+----------------------+----------------------+
@@ -7,13 +6,13 @@ Mon May  8 02:52:10 2023
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
 |                               |                      |               MIG M. |
 |===============================+======================+======================|
-|   0  Tesla V100-PCIE...  On   | 00000000:39:00.0 Off |                    0 |
-| N/A   35C    P0    25W / 250W |      0MiB / 32768MiB |      0%      Default |
-|                               |                      |                  N/A |
+|   0  NVIDIA A100-PCI...  On   | 00000000:17:00.0 Off |                    0 |
+| N/A   32C    P0    32W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
 +-------------------------------+----------------------+----------------------+
-|   1  Tesla V100-PCIE...  On   | 00000000:B1:00.0 Off |                    0 |
-| N/A   33C    P0    26W / 250W |      0MiB / 32768MiB |      0%      Default |
-|                               |                      |                  N/A |
+|   1  NVIDIA A100-PCI...  On   | 00000000:65:00.0 Off |                    0 |
+| N/A   28C    P0    32W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
 +-------------------------------+----------------------+----------------------+
                                                                                
 +-----------------------------------------------------------------------------+
@@ -23,18 +22,18 @@ Mon May  8 02:52:10 2023
 |=============================================================================|
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
-2023-05-08 02:52:43.052724: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
-2023-05-08 02:52:43.052916: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
-2023-05-08 02:52:43.052928: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
-I0508 02:53:19.227652 23086259226432 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
-I0508 02:53:19.228105 23086259226432 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
-I0508 02:53:19.228175 23086259226432 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
-I0508 02:54:03.353628 23086259226432 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_300000
+2023-05-08 15:39:33.225994: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-08 15:39:33.226367: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-08 15:39:33.226375: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0508 15:39:53.570353 22511787538240 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA Interpreter Host
+I0508 15:39:53.570657 22511787538240 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0508 15:39:53.570709 22511787538240 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0508 15:40:24.611704 22511787538240 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_300000
 /scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
   warnings.warn(
-/scratch/network/smohr/cos526/multinerf/render.py:91: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
-  img = cm.get_cmap('turbo')(img)[..., :3]
-Rendering checkpoint at step 300000.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+Evaluating checkpoint at step 300000.
 Evaluating image 1/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -48,7 +47,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 46.688s
+Rendered in 20.634s
+Color corrected in 2.807s
+psnr                           = 29.9652
+ssim                           = 0.9242
+normals_mae                    = 51.4805
+normals_pred_mae               = 49.7796
 Evaluating image 2/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -62,7 +66,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.481s
+Rendered in 8.044s
+Color corrected in 1.918s
+psnr                           = 28.1017
+ssim                           = 0.9138
+normals_mae                    = 51.2152
+normals_pred_mae               = 49.5342
 Evaluating image 3/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -76,7 +85,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.603s
+Rendered in 8.103s
+Color corrected in 1.913s
+psnr                           = 25.8334
+ssim                           = 0.9020
+normals_mae                    = 50.0479
+normals_pred_mae               = 49.8620
 Evaluating image 4/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -90,7 +104,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.599s
+Rendered in 8.042s
+Color corrected in 1.927s
+psnr                           = 25.5084
+ssim                           = 0.8969
+normals_mae                    = 48.5832
+normals_pred_mae               = 50.6211
 Evaluating image 5/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -104,7 +123,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.657s
+Rendered in 8.075s
+Color corrected in 1.886s
+psnr                           = 24.3735
+ssim                           = 0.8835
+normals_mae                    = 46.5230
+normals_pred_mae               = 52.1509
 Evaluating image 6/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -118,7 +142,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.606s
+Rendered in 8.096s
+Color corrected in 1.898s
+psnr                           = 23.2761
+ssim                           = 0.8687
+normals_mae                    = 44.8580
+normals_pred_mae               = 54.1718
 Evaluating image 7/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -132,7 +161,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.652s
+Rendered in 8.076s
+Color corrected in 1.892s
+psnr                           = 21.9356
+ssim                           = 0.8567
+normals_mae                    = 43.3022
+normals_pred_mae               = 55.9524
 Evaluating image 8/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -146,7 +180,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.645s
+Rendered in 8.085s
+Color corrected in 1.891s
+psnr                           = 20.9631
+ssim                           = 0.8501
+normals_mae                    = 42.3382
+normals_pred_mae               = 57.4613
 Evaluating image 9/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -160,7 +199,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.649s
+Rendered in 8.121s
+Color corrected in 1.887s
+psnr                           = 20.7927
+ssim                           = 0.8484
+normals_mae                    = 41.5081
+normals_pred_mae               = 58.8011
 Evaluating image 10/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -174,7 +218,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.683s
+Rendered in 8.066s
+Color corrected in 1.874s
+psnr                           = 20.9650
+ssim                           = 0.8512
+normals_mae                    = 40.9287
+normals_pred_mae               = 60.0529
 Evaluating image 11/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -188,7 +237,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.688s
+Rendered in 8.097s
+Color corrected in 1.868s
+psnr                           = 21.2948
+ssim                           = 0.8548
+normals_mae                    = 40.4890
+normals_pred_mae               = 61.2240
 Evaluating image 12/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -202,7 +256,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.665s
+Rendered in 8.093s
+Color corrected in 1.864s
+psnr                           = 22.3854
+ssim                           = 0.8588
+normals_mae                    = 40.5664
+normals_pred_mae               = 62.1163
 Evaluating image 13/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -216,7 +275,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.715s
+Rendered in 8.119s
+Color corrected in 1.861s
+psnr                           = 23.7913
+ssim                           = 0.8646
+normals_mae                    = 40.7717
+normals_pred_mae               = 62.8631
 Evaluating image 14/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -230,7 +294,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.665s
+Rendered in 8.098s
+Color corrected in 1.864s
+psnr                           = 24.3987
+ssim                           = 0.8690
+normals_mae                    = 41.1114
+normals_pred_mae               = 63.5065
 Evaluating image 15/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -244,7 +313,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.649s
+Rendered in 8.122s
+Color corrected in 1.853s
+psnr                           = 24.7545
+ssim                           = 0.8755
+normals_mae                    = 41.6230
+normals_pred_mae               = 64.0889
 Evaluating image 16/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -258,7 +332,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.687s
+Rendered in 8.077s
+Color corrected in 1.860s
+psnr                           = 25.2942
+ssim                           = 0.8816
+normals_mae                    = 42.1725
+normals_pred_mae               = 64.6089
 Evaluating image 17/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -272,7 +351,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.685s
+Rendered in 8.106s
+Color corrected in 1.884s
+psnr                           = 25.8518
+ssim                           = 0.8857
+normals_mae                    = 42.8289
+normals_pred_mae               = 65.0730
 Evaluating image 18/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -286,7 +370,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.667s
+Rendered in 8.088s
+Color corrected in 1.851s
+psnr                           = 26.3989
+ssim                           = 0.8872
+normals_mae                    = 43.5865
+normals_pred_mae               = 65.4699
 Evaluating image 19/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -300,7 +389,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.713s
+Rendered in 8.120s
+Color corrected in 1.845s
+psnr                           = 26.8510
+ssim                           = 0.8895
+normals_mae                    = 44.5408
+normals_pred_mae               = 65.7993
 Evaluating image 20/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -314,7 +408,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.726s
+Rendered in 8.096s
+Color corrected in 1.849s
+psnr                           = 27.0834
+ssim                           = 0.8924
+normals_mae                    = 45.6157
+normals_pred_mae               = 66.0246
 Evaluating image 21/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -328,7 +427,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.675s
+Rendered in 8.115s
+Color corrected in 1.830s
+psnr                           = 27.2391
+ssim                           = 0.8962
+normals_mae                    = 46.9695
+normals_pred_mae               = 66.1823
 Evaluating image 22/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -342,7 +446,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.685s
+Rendered in 8.088s
+Color corrected in 1.827s
+psnr                           = 28.2299
+ssim                           = 0.9006
+normals_mae                    = 48.2376
+normals_pred_mae               = 66.5861
 Evaluating image 23/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -356,7 +465,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.709s
+Rendered in 8.093s
+Color corrected in 1.829s
+psnr                           = 29.7370
+ssim                           = 0.9070
+normals_mae                    = 49.2492
+normals_pred_mae               = 67.0375
 Evaluating image 24/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -370,7 +484,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.668s
+Rendered in 8.087s
+Color corrected in 1.827s
+psnr                           = 30.6483
+ssim                           = 0.9112
+normals_mae                    = 49.7255
+normals_pred_mae               = 67.4842
 Evaluating image 25/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -384,7 +503,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.697s
+Rendered in 8.110s
+Color corrected in 1.835s
+psnr                           = 30.1371
+ssim                           = 0.9084
+normals_mae                    = 50.2311
+normals_pred_mae               = 67.8681
 Evaluating image 26/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -398,7 +522,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.662s
+Rendered in 8.107s
+Color corrected in 1.792s
+psnr                           = 29.3192
+ssim                           = 0.9043
+normals_mae                    = 50.5807
+normals_pred_mae               = 68.1533
 Evaluating image 27/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -412,7 +541,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.631s
+Rendered in 8.088s
+Color corrected in 1.824s
+psnr                           = 29.0974
+ssim                           = 0.9029
+normals_mae                    = 50.7876
+normals_pred_mae               = 68.2615
 Evaluating image 28/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -426,7 +560,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.673s
+Rendered in 8.095s
+Color corrected in 1.808s
+psnr                           = 28.9539
+ssim                           = 0.9027
+normals_mae                    = 50.5669
+normals_pred_mae               = 68.3204
 Evaluating image 29/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -440,7 +579,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.670s
+Rendered in 8.090s
+Color corrected in 1.824s
+psnr                           = 27.4664
+ssim                           = 0.8945
+normals_mae                    = 50.2918
+normals_pred_mae               = 68.3717
 Evaluating image 30/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -454,7 +598,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.657s
+Rendered in 8.102s
+Color corrected in 1.822s
+psnr                           = 25.9960
+ssim                           = 0.8825
+normals_mae                    = 49.6127
+normals_pred_mae               = 68.3141
 Evaluating image 31/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -468,7 +617,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.703s
+Rendered in 8.123s
+Color corrected in 1.856s
+psnr                           = 24.9415
+ssim                           = 0.8702
+normals_mae                    = 48.4902
+normals_pred_mae               = 68.2723
 Evaluating image 32/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -482,7 +636,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.697s
+Rendered in 8.191s
+Color corrected in 1.839s
+psnr                           = 23.9509
+ssim                           = 0.8608
+normals_mae                    = 47.6934
+normals_pred_mae               = 68.3030
 Evaluating image 33/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -496,7 +655,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.664s
+Rendered in 8.127s
+Color corrected in 1.853s
+psnr                           = 23.1121
+ssim                           = 0.8543
+normals_mae                    = 47.1181
+normals_pred_mae               = 68.2112
 Evaluating image 34/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -510,7 +674,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.707s
+Rendered in 8.064s
+Color corrected in 1.850s
+psnr                           = 22.6054
+ssim                           = 0.8486
+normals_mae                    = 46.5039
+normals_pred_mae               = 68.0379
 Evaluating image 35/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -524,7 +693,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.688s
+Rendered in 8.075s
+Color corrected in 1.853s
+psnr                           = 22.7452
+ssim                           = 0.8471
+normals_mae                    = 45.9435
+normals_pred_mae               = 67.8065
 Evaluating image 36/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -538,7 +712,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.674s
+Rendered in 8.108s
+Color corrected in 1.866s
+psnr                           = 23.0628
+ssim                           = 0.8484
+normals_mae                    = 45.5620
+normals_pred_mae               = 67.5352
 Evaluating image 37/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -552,7 +731,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.709s
+Rendered in 8.099s
+Color corrected in 1.863s
+psnr                           = 23.5037
+ssim                           = 0.8514
+normals_mae                    = 45.2115
+normals_pred_mae               = 67.2386
 Evaluating image 38/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -566,7 +750,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.683s
+Rendered in 8.097s
+Color corrected in 1.887s
+psnr                           = 24.4290
+ssim                           = 0.8562
+normals_mae                    = 45.0264
+normals_pred_mae               = 66.9274
 Evaluating image 39/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -580,7 +769,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.676s
+Rendered in 8.091s
+Color corrected in 1.872s
+psnr                           = 26.2055
+ssim                           = 0.8707
+normals_mae                    = 44.9252
+normals_pred_mae               = 66.5796
 Evaluating image 40/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -594,7 +788,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.718s
+Rendered in 8.089s
+Color corrected in 1.876s
+psnr                           = 28.3607
+ssim                           = 0.8854
+normals_mae                    = 45.0242
+normals_pred_mae               = 66.2225
 Evaluating image 41/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -608,7 +807,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.700s
+Rendered in 8.083s
+Color corrected in 1.871s
+psnr                           = 26.8137
+ssim                           = 0.8723
+normals_mae                    = 45.2243
+normals_pred_mae               = 65.8411
 Evaluating image 42/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -622,7 +826,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.675s
+Rendered in 8.098s
+Color corrected in 1.882s
+psnr                           = 24.9242
+ssim                           = 0.8576
+normals_mae                    = 45.5290
+normals_pred_mae               = 65.4030
 Evaluating image 43/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -636,7 +845,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.706s
+Rendered in 8.143s
+Color corrected in 1.882s
+psnr                           = 24.7390
+ssim                           = 0.8555
+normals_mae                    = 46.1369
+normals_pred_mae               = 64.8807
 Evaluating image 44/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -650,7 +864,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.702s
+Rendered in 8.079s
+Color corrected in 1.881s
+psnr                           = 24.8284
+ssim                           = 0.8574
+normals_mae                    = 47.0413
+normals_pred_mae               = 64.2823
 Evaluating image 45/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -664,7 +883,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.664s
+Rendered in 8.107s
+Color corrected in 1.892s
+psnr                           = 23.8668
+ssim                           = 0.8465
+normals_mae                    = 48.1758
+normals_pred_mae               = 63.5658
 Evaluating image 46/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -678,7 +902,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.673s
+Rendered in 8.084s
+Color corrected in 1.888s
+psnr                           = 22.2766
+ssim                           = 0.8326
+normals_mae                    = 49.9806
+normals_pred_mae               = 62.6475
 Evaluating image 47/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -692,7 +921,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.653s
+Rendered in 8.091s
+Color corrected in 1.900s
+psnr                           = 21.0273
+ssim                           = 0.8267
+normals_mae                    = 52.3199
+normals_pred_mae               = 61.5253
 Evaluating image 48/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -706,7 +940,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.630s
+Rendered in 8.091s
+Color corrected in 1.878s
+psnr                           = 20.5699
+ssim                           = 0.8318
+normals_mae                    = 55.0437
+normals_pred_mae               = 59.9780
 Evaluating image 49/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -720,7 +959,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.664s
+Rendered in 8.115s
+Color corrected in 1.874s
+psnr                           = 20.7895
+ssim                           = 0.8434
+normals_mae                    = 57.5804
+normals_pred_mae               = 59.1051
 Evaluating image 50/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -734,7 +978,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.652s
+Rendered in 8.097s
+Color corrected in 1.876s
+psnr                           = 22.7928
+ssim                           = 0.8609
+normals_mae                    = 59.3179
+normals_pred_mae               = 59.2016
 Evaluating image 51/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -748,7 +997,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.616s
+Rendered in 8.097s
+Color corrected in 1.885s
+psnr                           = 22.9235
+ssim                           = 0.8584
+normals_mae                    = 59.8556
+normals_pred_mae               = 59.7602
 Evaluating image 52/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -762,7 +1016,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.669s
+Rendered in 8.127s
+Color corrected in 1.877s
+psnr                           = 22.0270
+ssim                           = 0.8520
+normals_mae                    = 59.6893
+normals_pred_mae               = 60.4046
 Evaluating image 53/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -776,7 +1035,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.657s
+Rendered in 8.120s
+Color corrected in 1.869s
+psnr                           = 20.8074
+ssim                           = 0.8484
+normals_mae                    = 58.4419
+normals_pred_mae               = 61.5725
 Evaluating image 54/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -790,7 +1054,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.616s
+Rendered in 8.093s
+Color corrected in 1.875s
+psnr                           = 21.3249
+ssim                           = 0.8499
+normals_mae                    = 56.4230
+normals_pred_mae               = 63.6723
 Evaluating image 55/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -804,7 +1073,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.662s
+Rendered in 8.097s
+Color corrected in 1.867s
+psnr                           = 22.8297
+ssim                           = 0.8563
+normals_mae                    = 53.4491
+normals_pred_mae               = 66.2163
 Evaluating image 56/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -818,7 +1092,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.685s
+Rendered in 8.108s
+Color corrected in 1.875s
+psnr                           = 22.3999
+ssim                           = 0.8551
+normals_mae                    = 51.3673
+normals_pred_mae               = 68.2396
 Evaluating image 57/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -832,7 +1111,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.584s
+Rendered in 8.108s
+Color corrected in 1.867s
+psnr                           = 22.3605
+ssim                           = 0.8537
+normals_mae                    = 49.6805
+normals_pred_mae               = 69.9699
 Evaluating image 58/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -846,7 +1130,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.619s
+Rendered in 8.118s
+Color corrected in 1.866s
+psnr                           = 22.7366
+ssim                           = 0.8584
+normals_mae                    = 48.3904
+normals_pred_mae               = 71.3708
 Evaluating image 59/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -860,7 +1149,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.663s
+Rendered in 8.098s
+Color corrected in 1.855s
+psnr                           = 24.0174
+ssim                           = 0.8656
+normals_mae                    = 47.6983
+normals_pred_mae               = 72.6508
 Evaluating image 60/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -874,7 +1168,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.631s
+Rendered in 8.086s
+Color corrected in 1.856s
+psnr                           = 24.5668
+ssim                           = 0.8707
+normals_mae                    = 47.1455
+normals_pred_mae               = 73.8391
 Evaluating image 61/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -888,7 +1187,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.661s
+Rendered in 8.109s
+Color corrected in 1.852s
+psnr                           = 25.9584
+ssim                           = 0.8820
+normals_mae                    = 46.8923
+normals_pred_mae               = 74.9302
 Evaluating image 62/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -902,7 +1206,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.672s
+Rendered in 8.120s
+Color corrected in 1.849s
+psnr                           = 25.9299
+ssim                           = 0.8758
+normals_mae                    = 46.5757
+normals_pred_mae               = 75.9584
 Evaluating image 63/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -916,7 +1225,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.668s
+Rendered in 8.111s
+Color corrected in 1.854s
+psnr                           = 22.5760
+ssim                           = 0.8476
+normals_mae                    = 46.5946
+normals_pred_mae               = 76.9438
 Evaluating image 64/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -930,7 +1244,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.684s
+Rendered in 8.080s
+Color corrected in 1.848s
+psnr                           = 21.6892
+ssim                           = 0.8405
+normals_mae                    = 46.8550
+normals_pred_mae               = 77.8975
 Evaluating image 65/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -944,7 +1263,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.668s
+Rendered in 8.095s
+Color corrected in 1.844s
+psnr                           = 21.9730
+ssim                           = 0.8473
+normals_mae                    = 47.3613
+normals_pred_mae               = 78.7867
 Evaluating image 66/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -958,7 +1282,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.666s
+Rendered in 8.101s
+Color corrected in 1.848s
+psnr                           = 26.0316
+ssim                           = 0.8844
+normals_mae                    = 47.9759
+normals_pred_mae               = 79.6320
 Evaluating image 67/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -972,7 +1301,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.658s
+Rendered in 8.091s
+Color corrected in 1.842s
+psnr                           = 26.2467
+ssim                           = 0.8912
+normals_mae                    = 49.0800
+normals_pred_mae               = 80.4359
 Evaluating image 68/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -986,7 +1320,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.659s
+Rendered in 8.091s
+Color corrected in 1.835s
+psnr                           = 24.9682
+ssim                           = 0.8821
+normals_mae                    = 50.1634
+normals_pred_mae               = 81.1935
 Evaluating image 69/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1000,7 +1339,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.667s
+Rendered in 8.091s
+Color corrected in 1.869s
+psnr                           = 25.1210
+ssim                           = 0.8838
+normals_mae                    = 51.2671
+normals_pred_mae               = 81.8963
 Evaluating image 70/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1014,7 +1358,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.679s
+Rendered in 8.084s
+Color corrected in 1.821s
+psnr                           = 25.9213
+ssim                           = 0.8940
+normals_mae                    = 52.6470
+normals_pred_mae               = 82.5574
 Evaluating image 71/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1028,7 +1377,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.698s
+Rendered in 8.093s
+Color corrected in 1.850s
+psnr                           = 28.8754
+ssim                           = 0.9115
+normals_mae                    = 54.1060
+normals_pred_mae               = 83.1569
 Evaluating image 72/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1042,7 +1396,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.636s
+Rendered in 8.102s
+Color corrected in 1.811s
+psnr                           = 26.8731
+ssim                           = 0.9007
+normals_mae                    = 55.5419
+normals_pred_mae               = 83.7149
 Evaluating image 73/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1056,7 +1415,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.666s
+Rendered in 8.103s
+Color corrected in 1.813s
+psnr                           = 22.1890
+ssim                           = 0.8695
+normals_mae                    = 57.8122
+normals_pred_mae               = 84.3370
 Evaluating image 74/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1070,7 +1434,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.688s
+Rendered in 8.093s
+Color corrected in 1.803s
+psnr                           = 18.7842
+ssim                           = 0.8436
+normals_mae                    = 59.1866
+normals_pred_mae               = 84.8862
 Evaluating image 75/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1084,7 +1453,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.528s
+Rendered in 8.141s
+Color corrected in 1.794s
+psnr                           = 18.1579
+ssim                           = 0.8310
+normals_mae                    = 60.0350
+normals_pred_mae               = 85.3152
 Evaluating image 76/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1098,7 +1472,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.676s
+Rendered in 8.092s
+Color corrected in 1.785s
+psnr                           = 18.2826
+ssim                           = 0.8348
+normals_mae                    = 60.6479
+normals_pred_mae               = 85.5702
 Evaluating image 77/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1112,7 +1491,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.656s
+Rendered in 8.087s
+Color corrected in 1.791s
+psnr                           = 18.4617
+ssim                           = 0.8395
+normals_mae                    = 60.4941
+normals_pred_mae               = 85.8390
 Evaluating image 78/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1126,7 +1510,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.623s
+Rendered in 8.096s
+Color corrected in 1.797s
+psnr                           = 18.4301
+ssim                           = 0.8458
+normals_mae                    = 59.9012
+normals_pred_mae               = 85.9469
 Evaluating image 79/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1140,7 +1529,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.678s
+Rendered in 8.076s
+Color corrected in 1.800s
+psnr                           = 18.9690
+ssim                           = 0.8494
+normals_mae                    = 58.6606
+normals_pred_mae               = 85.9129
 Evaluating image 80/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1154,7 +1548,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.663s
+Rendered in 8.114s
+Color corrected in 1.841s
+psnr                           = 19.8075
+ssim                           = 0.8564
+normals_mae                    = 56.8711
+normals_pred_mae               = 85.9083
 Evaluating image 81/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1168,7 +1567,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.613s
+Rendered in 8.091s
+Color corrected in 1.834s
+psnr                           = 19.3007
+ssim                           = 0.8575
+normals_mae                    = 54.6703
+normals_pred_mae               = 85.9523
 Evaluating image 82/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1182,7 +1586,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.667s
+Rendered in 8.079s
+Color corrected in 1.810s
+psnr                           = 19.1149
+ssim                           = 0.8516
+normals_mae                    = 52.7727
+normals_pred_mae               = 85.9448
 Evaluating image 83/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1196,7 +1605,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.657s
+Rendered in 8.062s
+Color corrected in 1.817s
+psnr                           = 19.0506
+ssim                           = 0.8462
+normals_mae                    = 50.9501
+normals_pred_mae               = 85.9103
 Evaluating image 84/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1210,7 +1624,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.455s
+Rendered in 8.080s
+Color corrected in 1.818s
+psnr                           = 18.7792
+ssim                           = 0.8423
+normals_mae                    = 49.5337
+normals_pred_mae               = 85.8260
 Evaluating image 85/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1224,7 +1643,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.663s
+Rendered in 8.124s
+Color corrected in 1.819s
+psnr                           = 19.3700
+ssim                           = 0.8434
+normals_mae                    = 48.3301
+normals_pred_mae               = 85.7199
 Evaluating image 86/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1238,7 +1662,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.635s
+Rendered in 8.092s
+Color corrected in 1.816s
+psnr                           = 20.8313
+ssim                           = 0.8555
+normals_mae                    = 47.4526
+normals_pred_mae               = 85.5998
 Evaluating image 87/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1252,7 +1681,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.633s
+Rendered in 8.087s
+Color corrected in 1.818s
+psnr                           = 21.0730
+ssim                           = 0.8657
+normals_mae                    = 46.7938
+normals_pred_mae               = 85.4022
 Evaluating image 88/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1266,7 +1700,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.683s
+Rendered in 8.083s
+Color corrected in 1.858s
+psnr                           = 20.7694
+ssim                           = 0.8624
+normals_mae                    = 45.9209
+normals_pred_mae               = 85.2234
 Evaluating image 89/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1280,7 +1719,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.638s
+Rendered in 8.085s
+Color corrected in 1.818s
+psnr                           = 19.1066
+ssim                           = 0.8439
+normals_mae                    = 45.6430
+normals_pred_mae               = 85.0000
 Evaluating image 90/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1294,7 +1738,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.642s
+Rendered in 8.070s
+Color corrected in 1.820s
+psnr                           = 16.3039
+ssim                           = 0.8128
+normals_mae                    = 45.8397
+normals_pred_mae               = 84.7808
 Evaluating image 91/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1308,7 +1757,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.671s
+Rendered in 8.092s
+Color corrected in 1.814s
+psnr                           = 15.1323
+ssim                           = 0.7916
+normals_mae                    = 45.8651
+normals_pred_mae               = 84.5196
 Evaluating image 92/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1322,7 +1776,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.645s
+Rendered in 8.136s
+Color corrected in 1.817s
+psnr                           = 15.2897
+ssim                           = 0.7945
+normals_mae                    = 46.3067
+normals_pred_mae               = 84.2573
 Evaluating image 93/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1336,7 +1795,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.609s
+Rendered in 8.099s
+Color corrected in 1.822s
+psnr                           = 16.4129
+ssim                           = 0.8080
+normals_mae                    = 46.9546
+normals_pred_mae               = 83.9663
 Evaluating image 94/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1350,7 +1814,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.647s
+Rendered in 8.088s
+Color corrected in 1.818s
+psnr                           = 18.0165
+ssim                           = 0.8298
+normals_mae                    = 48.0132
+normals_pred_mae               = 83.6541
 Evaluating image 95/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1364,7 +1833,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.631s
+Rendered in 8.102s
+Color corrected in 1.816s
+psnr                           = 19.9893
+ssim                           = 0.8550
+normals_mae                    = 49.6315
+normals_pred_mae               = 83.3348
 Evaluating image 96/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1378,7 +1852,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.612s
+Rendered in 8.112s
+Color corrected in 1.820s
+psnr                           = 22.9148
+ssim                           = 0.8833
+normals_mae                    = 51.6719
+normals_pred_mae               = 82.9978
 Evaluating image 97/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1392,7 +1871,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.647s
+Rendered in 8.095s
+Color corrected in 1.814s
+psnr                           = 27.1180
+ssim                           = 0.9173
+normals_mae                    = 54.5407
+normals_pred_mae               = 82.5907
 Evaluating image 98/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1406,7 +1890,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.661s
+Rendered in 8.066s
+Color corrected in 1.801s
+psnr                           = 27.6888
+ssim                           = 0.9292
+normals_mae                    = 58.3895
+normals_pred_mae               = 82.0250
 Evaluating image 99/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1420,7 +1909,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.496s
+Rendered in 8.078s
+Color corrected in 1.807s
+psnr                           = 29.0617
+ssim                           = 0.9373
+normals_mae                    = 61.8568
+normals_pred_mae               = 81.6993
 Evaluating image 100/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1434,7 +1928,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.657s
+Rendered in 8.081s
+Color corrected in 1.798s
+psnr                           = 27.2469
+ssim                           = 0.9268
+normals_mae                    = 64.1348
+normals_pred_mae               = 81.5780
 Evaluating image 101/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1448,7 +1947,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.626s
+Rendered in 8.089s
+Color corrected in 1.802s
+psnr                           = 25.9324
+ssim                           = 0.9146
+normals_mae                    = 65.0958
+normals_pred_mae               = 81.5084
 Evaluating image 102/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1462,7 +1966,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.594s
+Rendered in 8.102s
+Color corrected in 1.807s
+psnr                           = 24.9587
+ssim                           = 0.9098
+normals_mae                    = 64.0520
+normals_pred_mae               = 81.4467
 Evaluating image 103/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1476,7 +1985,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.620s
+Rendered in 8.098s
+Color corrected in 1.797s
+psnr                           = 25.5452
+ssim                           = 0.9144
+normals_mae                    = 62.0255
+normals_pred_mae               = 81.3666
 Evaluating image 104/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1490,7 +2004,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.606s
+Rendered in 8.115s
+Color corrected in 1.804s
+psnr                           = 27.6963
+ssim                           = 0.9219
+normals_mae                    = 58.5299
+normals_pred_mae               = 81.4633
 Evaluating image 105/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1504,7 +2023,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.634s
+Rendered in 8.128s
+Color corrected in 1.809s
+psnr                           = 26.3244
+ssim                           = 0.9070
+normals_mae                    = 55.1742
+normals_pred_mae               = 81.8009
 Evaluating image 106/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1518,7 +2042,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.639s
+Rendered in 8.107s
+Color corrected in 1.806s
+psnr                           = 21.5353
+ssim                           = 0.8754
+normals_mae                    = 52.3936
+normals_pred_mae               = 82.0433
 Evaluating image 107/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1532,7 +2061,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.660s
+Rendered in 8.092s
+Color corrected in 1.809s
+psnr                           = 19.1433
+ssim                           = 0.8560
+normals_mae                    = 50.6516
+normals_pred_mae               = 82.2290
 Evaluating image 108/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1546,7 +2080,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.639s
+Rendered in 8.130s
+Color corrected in 1.818s
+psnr                           = 18.7528
+ssim                           = 0.8414
+normals_mae                    = 49.1654
+normals_pred_mae               = 82.4122
 Evaluating image 109/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1560,7 +2099,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.654s
+Rendered in 8.084s
+Color corrected in 1.831s
+psnr                           = 18.3145
+ssim                           = 0.8322
+normals_mae                    = 48.2449
+normals_pred_mae               = 82.5978
 Evaluating image 110/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1574,7 +2118,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.630s
+Rendered in 8.096s
+Color corrected in 1.823s
+psnr                           = 19.3550
+ssim                           = 0.8433
+normals_mae                    = 47.6350
+normals_pred_mae               = 82.7687
 Evaluating image 111/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1588,7 +2137,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.657s
+Rendered in 8.095s
+Color corrected in 1.817s
+psnr                           = 20.1507
+ssim                           = 0.8448
+normals_mae                    = 47.3181
+normals_pred_mae               = 82.9263
 Evaluating image 112/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1602,7 +2156,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.708s
+Rendered in 8.108s
+Color corrected in 1.816s
+psnr                           = 22.0765
+ssim                           = 0.8654
+normals_mae                    = 47.4503
+normals_pred_mae               = 83.0531
 Evaluating image 113/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1616,7 +2175,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.668s
+Rendered in 8.121s
+Color corrected in 1.828s
+psnr                           = 24.0310
+ssim                           = 0.8829
+normals_mae                    = 47.4792
+normals_pred_mae               = 83.1676
 Evaluating image 114/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1630,7 +2194,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.616s
+Rendered in 8.088s
+Color corrected in 1.827s
+psnr                           = 24.0881
+ssim                           = 0.8820
+normals_mae                    = 47.8527
+normals_pred_mae               = 83.2795
 Evaluating image 115/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1644,7 +2213,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.656s
+Rendered in 8.070s
+Color corrected in 1.822s
+psnr                           = 22.6052
+ssim                           = 0.8664
+normals_mae                    = 48.3695
+normals_pred_mae               = 83.3650
 Evaluating image 116/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1658,7 +2232,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.675s
+Rendered in 8.107s
+Color corrected in 1.817s
+psnr                           = 18.5739
+ssim                           = 0.8411
+normals_mae                    = 49.1097
+normals_pred_mae               = 83.4502
 Evaluating image 117/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1672,7 +2251,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.635s
+Rendered in 8.091s
+Color corrected in 1.810s
+psnr                           = 16.3555
+ssim                           = 0.8232
+normals_mae                    = 49.9873
+normals_pred_mae               = 83.4920
 Evaluating image 118/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1686,7 +2270,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.645s
+Rendered in 8.065s
+Color corrected in 1.810s
+psnr                           = 15.1123
+ssim                           = 0.8116
+normals_mae                    = 50.9603
+normals_pred_mae               = 83.5593
 Evaluating image 119/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1700,7 +2289,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.639s
+Rendered in 8.083s
+Color corrected in 1.818s
+psnr                           = 15.3120
+ssim                           = 0.8226
+normals_mae                    = 52.3056
+normals_pred_mae               = 83.5595
 Evaluating image 120/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1714,7 +2308,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.631s
+Rendered in 8.084s
+Color corrected in 1.810s
+psnr                           = 15.7325
+ssim                           = 0.8333
+normals_mae                    = 53.8446
+normals_pred_mae               = 83.5438
 Evaluating image 121/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1728,7 +2327,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.671s
+Rendered in 8.108s
+Color corrected in 1.805s
+psnr                           = 17.0048
+ssim                           = 0.8539
+normals_mae                    = 55.5367
+normals_pred_mae               = 83.4862
 Evaluating image 122/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1742,7 +2346,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.665s
+Rendered in 8.098s
+Color corrected in 1.804s
+psnr                           = 19.5516
+ssim                           = 0.8780
+normals_mae                    = 57.6233
+normals_pred_mae               = 83.4118
 Evaluating image 123/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1756,7 +2365,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.535s
+Rendered in 8.106s
+Color corrected in 1.797s
+psnr                           = 26.0046
+ssim                           = 0.9187
+normals_mae                    = 59.1238
+normals_pred_mae               = 83.3694
 Evaluating image 124/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1770,7 +2384,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.662s
+Rendered in 8.079s
+Color corrected in 1.791s
+psnr                           = 30.7153
+ssim                           = 0.9368
+normals_mae                    = 60.2267
+normals_pred_mae               = 83.3914
 Evaluating image 125/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1784,7 +2403,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.665s
+Rendered in 8.120s
+Color corrected in 1.791s
+psnr                           = 29.4471
+ssim                           = 0.9289
+normals_mae                    = 60.8701
+normals_pred_mae               = 83.2985
 Evaluating image 126/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1798,7 +2422,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.626s
+Rendered in 8.085s
+Color corrected in 1.794s
+psnr                           = 32.7536
+ssim                           = 0.9421
+normals_mae                    = 61.4138
+normals_pred_mae               = 83.1171
 Evaluating image 127/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1812,7 +2441,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.646s
+Rendered in 8.082s
+Color corrected in 1.797s
+psnr                           = 29.2313
+ssim                           = 0.9290
+normals_mae                    = 60.8418
+normals_pred_mae               = 82.8304
 Evaluating image 128/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1826,7 +2460,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.677s
+Rendered in 8.101s
+Color corrected in 1.804s
+psnr                           = 29.1148
+ssim                           = 0.9258
+normals_mae                    = 59.8414
+normals_pred_mae               = 82.4464
 Evaluating image 129/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1840,7 +2479,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.611s
+Rendered in 8.108s
+Color corrected in 1.800s
+psnr                           = 29.4755
+ssim                           = 0.9270
+normals_mae                    = 58.6822
+normals_pred_mae               = 81.9360
 Evaluating image 130/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1854,7 +2498,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.644s
+Rendered in 8.094s
+Color corrected in 1.816s
+psnr                           = 27.8329
+ssim                           = 0.9152
+normals_mae                    = 56.7558
+normals_pred_mae               = 81.3929
 Evaluating image 131/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1868,7 +2517,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.616s
+Rendered in 8.098s
+Color corrected in 1.813s
+psnr                           = 24.9723
+ssim                           = 0.8945
+normals_mae                    = 55.3282
+normals_pred_mae               = 80.9070
 Evaluating image 132/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1882,7 +2536,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.612s
+Rendered in 8.089s
+Color corrected in 1.825s
+psnr                           = 24.7731
+ssim                           = 0.8930
+normals_mae                    = 54.0058
+normals_pred_mae               = 80.3635
 Evaluating image 133/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1896,7 +2555,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.681s
+Rendered in 8.078s
+Color corrected in 1.825s
+psnr                           = 26.3544
+ssim                           = 0.9032
+normals_mae                    = 52.6530
+normals_pred_mae               = 79.7444
 Evaluating image 134/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1910,7 +2574,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.628s
+Rendered in 8.066s
+Color corrected in 1.828s
+psnr                           = 27.2814
+ssim                           = 0.9042
+normals_mae                    = 51.4907
+normals_pred_mae               = 79.0980
 Evaluating image 135/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1924,7 +2593,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.636s
+Rendered in 8.090s
+Color corrected in 1.836s
+psnr                           = 27.0529
+ssim                           = 0.8996
+normals_mae                    = 50.5867
+normals_pred_mae               = 78.4407
 Evaluating image 136/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1938,7 +2612,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.674s
+Rendered in 8.084s
+Color corrected in 1.838s
+psnr                           = 24.6062
+ssim                           = 0.8733
+normals_mae                    = 49.7655
+normals_pred_mae               = 77.7273
 Evaluating image 137/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1952,7 +2631,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.685s
+Rendered in 8.097s
+Color corrected in 1.871s
+psnr                           = 21.4386
+ssim                           = 0.8347
+normals_mae                    = 49.0753
+normals_pred_mae               = 76.9727
 Evaluating image 138/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1966,7 +2650,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.643s
+Rendered in 8.072s
+Color corrected in 1.837s
+psnr                           = 18.7816
+ssim                           = 0.8024
+normals_mae                    = 48.5571
+normals_pred_mae               = 76.1707
 Evaluating image 139/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1980,7 +2669,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.673s
+Rendered in 8.087s
+Color corrected in 1.857s
+psnr                           = 17.9648
+ssim                           = 0.7916
+normals_mae                    = 48.2737
+normals_pred_mae               = 75.3272
 Evaluating image 140/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -1994,7 +2688,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.660s
+Rendered in 8.096s
+Color corrected in 1.855s
+psnr                           = 18.0378
+ssim                           = 0.7965
+normals_mae                    = 48.0890
+normals_pred_mae               = 74.4623
 Evaluating image 141/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2008,7 +2707,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.617s
+Rendered in 8.087s
+Color corrected in 1.857s
+psnr                           = 19.5702
+ssim                           = 0.8113
+normals_mae                    = 48.1833
+normals_pred_mae               = 73.5678
 Evaluating image 142/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2022,7 +2726,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.686s
+Rendered in 8.110s
+Color corrected in 1.891s
+psnr                           = 20.9403
+ssim                           = 0.8192
+normals_mae                    = 48.3340
+normals_pred_mae               = 72.6247
 Evaluating image 143/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2036,7 +2745,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.670s
+Rendered in 8.099s
+Color corrected in 1.855s
+psnr                           = 21.8308
+ssim                           = 0.8290
+normals_mae                    = 48.6917
+normals_pred_mae               = 71.6145
 Evaluating image 144/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2050,7 +2764,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.651s
+Rendered in 8.124s
+Color corrected in 1.862s
+psnr                           = 20.9697
+ssim                           = 0.8307
+normals_mae                    = 49.3983
+normals_pred_mae               = 70.5031
 Evaluating image 145/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2064,7 +2783,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.623s
+Rendered in 8.071s
+Color corrected in 1.863s
+psnr                           = 19.9854
+ssim                           = 0.8197
+normals_mae                    = 50.3792
+normals_pred_mae               = 69.2853
 Evaluating image 146/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2078,7 +2802,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.647s
+Rendered in 8.097s
+Color corrected in 1.864s
+psnr                           = 19.8701
+ssim                           = 0.8093
+normals_mae                    = 51.8196
+normals_pred_mae               = 67.7939
 Evaluating image 147/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2092,7 +2821,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.590s
+Rendered in 8.076s
+Color corrected in 1.916s
+psnr                           = 19.9755
+ssim                           = 0.8169
+normals_mae                    = 53.7271
+normals_pred_mae               = 66.0235
 Evaluating image 148/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2106,7 +2840,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.639s
+Rendered in 8.095s
+Color corrected in 1.882s
+psnr                           = 21.3771
+ssim                           = 0.8418
+normals_mae                    = 56.4101
+normals_pred_mae               = 63.8740
 Evaluating image 149/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2120,7 +2859,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.653s
+Rendered in 8.104s
+Color corrected in 1.869s
+psnr                           = 23.0114
+ssim                           = 0.8698
+normals_mae                    = 58.7802
+normals_pred_mae               = 62.1049
 Evaluating image 150/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2134,7 +2878,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.614s
+Rendered in 8.119s
+Color corrected in 1.872s
+psnr                           = 25.0196
+ssim                           = 0.8850
+normals_mae                    = 60.0197
+normals_pred_mae               = 61.2057
 Evaluating image 151/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2148,7 +2897,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.654s
+Rendered in 8.094s
+Color corrected in 1.880s
+psnr                           = 23.2957
+ssim                           = 0.8669
+normals_mae                    = 60.2217
+normals_pred_mae               = 60.7197
 Evaluating image 152/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2162,7 +2916,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.656s
+Rendered in 8.091s
+Color corrected in 1.915s
+psnr                           = 22.0277
+ssim                           = 0.8520
+normals_mae                    = 59.6823
+normals_pred_mae               = 60.4047
 Evaluating image 153/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2176,7 +2935,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.601s
+Rendered in 8.094s
+Color corrected in 1.874s
+psnr                           = 20.8524
+ssim                           = 0.8470
+normals_mae                    = 57.7990
+normals_pred_mae               = 60.5610
 Evaluating image 154/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2190,7 +2954,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.637s
+Rendered in 8.094s
+Color corrected in 1.879s
+psnr                           = 21.4739
+ssim                           = 0.8490
+normals_mae                    = 55.6271
+normals_pred_mae               = 61.6926
 Evaluating image 155/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2204,7 +2973,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.638s
+Rendered in 8.119s
+Color corrected in 1.878s
+psnr                           = 21.9389
+ssim                           = 0.8465
+normals_mae                    = 52.9327
+normals_pred_mae               = 63.4931
 Evaluating image 156/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2218,7 +2992,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.649s
+Rendered in 8.101s
+Color corrected in 1.875s
+psnr                           = 21.5576
+ssim                           = 0.8413
+normals_mae                    = 50.4536
+normals_pred_mae               = 64.8048
 Evaluating image 157/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2232,7 +3011,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.654s
+Rendered in 8.121s
+Color corrected in 1.874s
+psnr                           = 21.5931
+ssim                           = 0.8396
+normals_mae                    = 48.4576
+normals_pred_mae               = 65.9062
 Evaluating image 158/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2246,7 +3030,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.673s
+Rendered in 8.112s
+Color corrected in 1.876s
+psnr                           = 22.4187
+ssim                           = 0.8477
+normals_mae                    = 46.9492
+normals_pred_mae               = 66.7373
 Evaluating image 159/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2260,7 +3049,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.645s
+Rendered in 8.087s
+Color corrected in 1.893s
+psnr                           = 24.6940
+ssim                           = 0.8676
+normals_mae                    = 45.9890
+normals_pred_mae               = 67.4580
 Evaluating image 160/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2274,7 +3068,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.671s
+Rendered in 8.107s
+Color corrected in 1.872s
+psnr                           = 26.7794
+ssim                           = 0.8834
+normals_mae                    = 45.3178
+normals_pred_mae               = 68.0775
 Evaluating image 161/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2288,7 +3087,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.681s
+Rendered in 8.098s
+Color corrected in 1.876s
+psnr                           = 28.1971
+ssim                           = 0.8923
+normals_mae                    = 44.7092
+normals_pred_mae               = 68.6184
 Evaluating image 162/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2302,7 +3106,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.659s
+Rendered in 8.110s
+Color corrected in 1.879s
+psnr                           = 28.4477
+ssim                           = 0.8908
+normals_mae                    = 44.3539
+normals_pred_mae               = 69.1132
 Evaluating image 163/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2316,7 +3125,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.665s
+Rendered in 8.116s
+Color corrected in 1.882s
+psnr                           = 26.9581
+ssim                           = 0.8800
+normals_mae                    = 44.2294
+normals_pred_mae               = 69.5509
 Evaluating image 164/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2330,7 +3144,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.671s
+Rendered in 8.104s
+Color corrected in 1.872s
+psnr                           = 26.3716
+ssim                           = 0.8787
+normals_mae                    = 44.1859
+normals_pred_mae               = 69.9194
 Evaluating image 165/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2344,7 +3163,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.639s
+Rendered in 8.095s
+Color corrected in 1.865s
+psnr                           = 26.7497
+ssim                           = 0.8796
+normals_mae                    = 44.2721
+normals_pred_mae               = 70.2512
 Evaluating image 166/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2358,7 +3182,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.684s
+Rendered in 8.106s
+Color corrected in 1.865s
+psnr                           = 26.2271
+ssim                           = 0.8707
+normals_mae                    = 44.6664
+normals_pred_mae               = 70.5830
 Evaluating image 167/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2372,7 +3201,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.678s
+Rendered in 8.117s
+Color corrected in 1.859s
+psnr                           = 25.6691
+ssim                           = 0.8693
+normals_mae                    = 45.0626
+normals_pred_mae               = 70.8690
 Evaluating image 168/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2386,7 +3220,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.633s
+Rendered in 8.101s
+Color corrected in 1.852s
+psnr                           = 24.4038
+ssim                           = 0.8631
+normals_mae                    = 45.5008
+normals_pred_mae               = 71.1122
 Evaluating image 169/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2400,7 +3239,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.661s
+Rendered in 8.097s
+Color corrected in 1.852s
+psnr                           = 23.4044
+ssim                           = 0.8570
+normals_mae                    = 46.0288
+normals_pred_mae               = 71.2820
 Evaluating image 170/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2414,7 +3258,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.678s
+Rendered in 8.087s
+Color corrected in 1.832s
+psnr                           = 22.4607
+ssim                           = 0.8483
+normals_mae                    = 46.5714
+normals_pred_mae               = 71.3670
 Evaluating image 171/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2428,7 +3277,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.672s
+Rendered in 8.111s
+Color corrected in 1.836s
+psnr                           = 21.8273
+ssim                           = 0.8451
+normals_mae                    = 47.2481
+normals_pred_mae               = 71.3361
 Evaluating image 172/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2442,7 +3296,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.676s
+Rendered in 8.096s
+Color corrected in 1.819s
+psnr                           = 21.1955
+ssim                           = 0.8394
+normals_mae                    = 48.3734
+normals_pred_mae               = 71.3924
 Evaluating image 173/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2456,7 +3315,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.690s
+Rendered in 8.101s
+Color corrected in 1.822s
+psnr                           = 20.9135
+ssim                           = 0.8332
+normals_mae                    = 49.3078
+normals_pred_mae               = 71.4558
 Evaluating image 174/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2470,7 +3334,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.692s
+Rendered in 8.085s
+Color corrected in 1.812s
+psnr                           = 21.2236
+ssim                           = 0.8321
+normals_mae                    = 49.7352
+normals_pred_mae               = 71.4111
 Evaluating image 175/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2484,7 +3353,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.687s
+Rendered in 8.101s
+Color corrected in 1.816s
+psnr                           = 21.7520
+ssim                           = 0.8347
+normals_mae                    = 49.7210
+normals_pred_mae               = 71.3628
 Evaluating image 176/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2498,7 +3372,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.681s
+Rendered in 8.104s
+Color corrected in 1.824s
+psnr                           = 22.0359
+ssim                           = 0.8368
+normals_mae                    = 49.9960
+normals_pred_mae               = 71.2761
 Evaluating image 177/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2512,7 +3391,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.659s
+Rendered in 8.118s
+Color corrected in 1.801s
+psnr                           = 22.3599
+ssim                           = 0.8444
+normals_mae                    = 49.6006
+normals_pred_mae               = 71.0092
 Evaluating image 178/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2526,7 +3410,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.666s
+Rendered in 8.097s
+Color corrected in 1.827s
+psnr                           = 22.7659
+ssim                           = 0.8519
+normals_mae                    = 49.1694
+normals_pred_mae               = 70.6543
 Evaluating image 179/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2540,7 +3429,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.672s
+Rendered in 8.143s
+Color corrected in 1.816s
+psnr                           = 23.4144
+ssim                           = 0.8586
+normals_mae                    = 48.2950
+normals_pred_mae               = 70.2216
 Evaluating image 180/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2554,7 +3448,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.674s
+Rendered in 8.091s
+Color corrected in 1.830s
+psnr                           = 24.0280
+ssim                           = 0.8631
+normals_mae                    = 47.1324
+normals_pred_mae               = 69.7585
 Evaluating image 181/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2568,7 +3467,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.694s
+Rendered in 8.124s
+Color corrected in 1.825s
+psnr                           = 24.5224
+ssim                           = 0.8655
+normals_mae                    = 45.7311
+normals_pred_mae               = 69.3241
 Evaluating image 182/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2582,7 +3486,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.671s
+Rendered in 8.109s
+Color corrected in 1.836s
+psnr                           = 24.8699
+ssim                           = 0.8653
+normals_mae                    = 44.2968
+normals_pred_mae               = 69.1305
 Evaluating image 183/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2596,7 +3505,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.654s
+Rendered in 8.090s
+Color corrected in 1.858s
+psnr                           = 24.4823
+ssim                           = 0.8630
+normals_mae                    = 43.1086
+normals_pred_mae               = 68.8317
 Evaluating image 184/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2610,7 +3524,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.707s
+Rendered in 8.123s
+Color corrected in 1.840s
+psnr                           = 23.7149
+ssim                           = 0.8580
+normals_mae                    = 42.1348
+normals_pred_mae               = 68.4290
 Evaluating image 185/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2624,7 +3543,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.690s
+Rendered in 8.099s
+Color corrected in 1.846s
+psnr                           = 22.7876
+ssim                           = 0.8491
+normals_mae                    = 41.4793
+normals_pred_mae               = 67.9421
 Evaluating image 186/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2638,7 +3562,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.621s
+Rendered in 8.091s
+Color corrected in 1.853s
+psnr                           = 22.0835
+ssim                           = 0.8414
+normals_mae                    = 40.7931
+normals_pred_mae               = 67.3944
 Evaluating image 187/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2652,7 +3581,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.674s
+Rendered in 8.133s
+Color corrected in 1.867s
+psnr                           = 21.5947
+ssim                           = 0.8385
+normals_mae                    = 40.2444
+normals_pred_mae               = 66.7876
 Evaluating image 188/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2666,7 +3600,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.704s
+Rendered in 8.107s
+Color corrected in 1.862s
+psnr                           = 21.4618
+ssim                           = 0.8374
+normals_mae                    = 39.8561
+normals_pred_mae               = 66.1364
 Evaluating image 189/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2680,7 +3619,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.642s
+Rendered in 8.126s
+Color corrected in 1.863s
+psnr                           = 21.5423
+ssim                           = 0.8397
+normals_mae                    = 39.6748
+normals_pred_mae               = 65.3905
 Evaluating image 190/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2694,7 +3638,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.673s
+Rendered in 8.098s
+Color corrected in 1.861s
+psnr                           = 21.9118
+ssim                           = 0.8460
+normals_mae                    = 39.5754
+normals_pred_mae               = 64.5744
 Evaluating image 191/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2708,7 +3657,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.665s
+Rendered in 8.109s
+Color corrected in 1.865s
+psnr                           = 22.4141
+ssim                           = 0.8504
+normals_mae                    = 39.6740
+normals_pred_mae               = 63.5913
 Evaluating image 192/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2722,7 +3676,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.631s
+Rendered in 8.090s
+Color corrected in 1.877s
+psnr                           = 23.0632
+ssim                           = 0.8585
+normals_mae                    = 40.1614
+normals_pred_mae               = 62.2465
 Evaluating image 193/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2736,7 +3695,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.681s
+Rendered in 8.095s
+Color corrected in 1.869s
+psnr                           = 23.8654
+ssim                           = 0.8668
+normals_mae                    = 40.8071
+normals_pred_mae               = 60.8047
 Evaluating image 194/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2750,7 +3714,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.656s
+Rendered in 8.128s
+Color corrected in 1.890s
+psnr                           = 25.1682
+ssim                           = 0.8761
+normals_mae                    = 41.8910
+normals_pred_mae               = 59.2086
 Evaluating image 195/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2764,7 +3733,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.521s
+Rendered in 8.127s
+Color corrected in 1.912s
+psnr                           = 26.0173
+ssim                           = 0.8811
+normals_mae                    = 43.0457
+normals_pred_mae               = 57.3345
 Evaluating image 196/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2778,7 +3752,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.649s
+Rendered in 8.084s
+Color corrected in 1.907s
+psnr                           = 25.8421
+ssim                           = 0.8858
+normals_mae                    = 44.6077
+normals_pred_mae               = 55.2677
 Evaluating image 197/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2792,7 +3771,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.646s
+Rendered in 8.068s
+Color corrected in 1.889s
+psnr                           = 26.0771
+ssim                           = 0.8920
+normals_mae                    = 46.3791
+normals_pred_mae               = 52.9681
 Evaluating image 198/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2806,7 +3790,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.608s
+Rendered in 8.087s
+Color corrected in 1.893s
+psnr                           = 26.3952
+ssim                           = 0.8983
+normals_mae                    = 48.4012
+normals_pred_mae               = 51.2831
 Evaluating image 199/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2820,7 +3809,12 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.628s
+Rendered in 8.103s
+Color corrected in 1.886s
+psnr                           = 26.0955
+ssim                           = 0.9014
+normals_mae                    = 49.7157
+normals_pred_mae               = 50.1618
 Evaluating image 200/200
 Rendering chunk 0/78
 Rendering chunk 7/78
@@ -2834,24 +3828,10 @@ Rendering chunk 56/78
 Rendering chunk 63/78
 Rendering chunk 70/78
 Rendering chunk 77/78
-Rendered in 28.641s
-All files found, creating videos (job 0).
-Video shape is (800, 800)
-Making video /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/render/toaster_shinyblender_test_preds_step_300000_color.mp4...
-Making video /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/render/toaster_shinyblender_test_preds_step_300000_normals.mp4...
-Making video /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/render/toaster_shinyblender_test_preds_step_300000_acc.mp4...
-Making video /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/render/toaster_shinyblender_test_preds_step_300000_distance_mean.mp4...
-Making video /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/render/toaster_shinyblender_test_preds_step_300000_distance_median.mp4...
-[2. 2.]
-2023-05-08 04:31:38.555154: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
-2023-05-08 04:31:38.555248: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
-2023-05-08 04:31:38.555257: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
-I0508 04:31:40.282901 23192269756224 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Host CUDA Interpreter
-I0508 04:31:40.283434 23192269756224 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
-I0508 04:31:40.283504 23192269756224 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
-I0508 04:32:18.666048 23192269756224 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_300000
-/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
-  warnings.warn(
-/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
-  warnings.warn(
-slurmstepd: error: *** JOB 1763216 ON adroit-h11g1 CANCELLED AT 2023-05-08T05:52:28 DUE TO TIME LIMIT ***
+Rendered in 8.085s
+Color corrected in 1.897s
+psnr                           = 27.4580
+ssim                           = 0.9114
+normals_mae                    = 50.9994
+normals_pred_mae               = 49.6324
+[0.99849015 0.99849015]
