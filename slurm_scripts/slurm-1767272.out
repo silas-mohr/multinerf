@@ -1,0 +1,135 @@
+Wed May 10 21:01:01 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:14:00.0 Off |                    0 |
+| N/A   31C    P0    24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:39:00.0 Off |                    0 |
+| N/A   33C    P0    24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/render': Is a directory
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/test_preds': Is a directory
+2023-05-10 21:01:04.139667: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 21:01:04.139742: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 21:01:04.139751: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0510 21:01:06.097505 23131168630592 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA Interpreter Host
+I0510 21:01:06.097876 23131168630592 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0510 21:01:06.097973 23131168630592 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+> /scratch/network/smohr/cos526/multinerf/internal/transformers.py(74)__call__()
+-> x = EncoderBlock(
+(Pdb) Traceback (most recent call last):
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 288, in <module>
+    app.run(main)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 67, in main
+    setup = train_utils.setup_model(config, key, dataset=dataset)
+  File "/scratch/network/smohr/cos526/multinerf/internal/train_utils.py", line 403, in setup_model
+    model, variables = models.construct_model(rng, dummy_rays, config)
+  File "/scratch/network/smohr/cos526/multinerf/internal/models.py", line 253, in construct_model
+    init_variables = model.init(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/traceback_util.py", line 166, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 1636, in init
+    _, v_out = self.init_with_output(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/traceback_util.py", line 166, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 1541, in init_with_output
+    return init_with_output(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/scope.py", line 965, in wrapper
+    return apply(fn, mutable=mutable, flags=init_flags)({}, *args, rngs=rngs,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/scope.py", line 933, in wrapper
+    y = fn(root, *args, **kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 2117, in scope_fn
+    return fn(module.clone(parent=scope), *args, **kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 428, in wrapped_module_method
+    return self._call_wrapped_method(fun, args, kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 860, in _call_wrapped_method
+    y = fun(self, *args, **kwargs)
+  File "/scratch/network/smohr/cos526/multinerf/internal/models.py", line 173, in __call__
+    ray_results = mlp(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 428, in wrapped_module_method
+    return self._call_wrapped_method(fun, args, kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 860, in _call_wrapped_method
+    y = fun(self, *args, **kwargs)
+  File "/scratch/network/smohr/cos526/multinerf/internal/models.py", line 472, in __call__
+    x = transformers.LearnedEmbeddings()(x, viewdirs[..., None, :])
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 428, in wrapped_module_method
+    return self._call_wrapped_method(fun, args, kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 860, in _call_wrapped_method
+    y = fun(self, *args, **kwargs)
+  File "/scratch/network/smohr/cos526/multinerf/internal/transformers.py", line 163, in __call__
+    spec_color = LETransformer(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 428, in wrapped_module_method
+    return self._call_wrapped_method(fun, args, kwargs)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/linen/module.py", line 860, in _call_wrapped_method
+    y = fun(self, *args, **kwargs)
+  File "/scratch/network/smohr/cos526/multinerf/internal/transformers.py", line 74, in __call__
+    x = EncoderBlock(
+  File "/scratch/network/smohr/cos526/multinerf/internal/transformers.py", line 74, in __call__
+    x = EncoderBlock(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+jax._src.traceback_util.UnfilteredStackTrace: bdb.BdbQuit
+
+The stack trace below excludes JAX-internal frames.
+The preceding is the original exception that occurred, unmodified.
+
+--------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 288, in <module>
+    app.run(main)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 67, in main
+    setup = train_utils.setup_model(config, key, dataset=dataset)
+  File "/scratch/network/smohr/cos526/multinerf/internal/train_utils.py", line 403, in setup_model
+    model, variables = models.construct_model(rng, dummy_rays, config)
+  File "/scratch/network/smohr/cos526/multinerf/internal/models.py", line 253, in construct_model
+    init_variables = model.init(
+  File "/scratch/network/smohr/cos526/multinerf/internal/models.py", line 173, in __call__
+    ray_results = mlp(
+  File "/scratch/network/smohr/cos526/multinerf/internal/models.py", line 472, in __call__
+    x = transformers.LearnedEmbeddings()(x, viewdirs[..., None, :])
+  File "/scratch/network/smohr/cos526/multinerf/internal/transformers.py", line 163, in __call__
+    spec_color = LETransformer(
+  File "/scratch/network/smohr/cos526/multinerf/internal/transformers.py", line 74, in __call__
+    x = EncoderBlock(
+  File "/scratch/network/smohr/cos526/multinerf/internal/transformers.py", line 74, in __call__
+    x = EncoderBlock(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+

@@ -1,0 +1,374 @@
+Thu May 11 04:10:28 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  On   | 00000000:65:00.0 Off |                    0 |
+| N/A   37C    P0    34W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA A100-PCI...  On   | 00000000:E3:00.0 Off |                    0 |
+| N/A   31C    P0    37W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/render': Is a directory
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/test_preds': Is a directory
+2023-05-11 04:10:41.454125: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 04:10:41.454628: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 04:10:41.454636: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0511 04:10:50.577502 22536125589312 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter CUDA Host
+I0511 04:10:50.577961 22536125589312 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0511 04:10:50.578022 22536125589312 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+I0511 04:11:40.469609 22536125589312 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer with prefix checkpoint_
+I0511 04:12:14.527705 22536125589312 checkpoints.py:490] Saving checkpoint at step: 1
+I0511 04:12:14.555040 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_1
+I0511 05:04:02.936765 22536125589312 checkpoints.py:490] Saving checkpoint at step: 10000
+I0511 05:04:02.981923 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_10000
+I0511 05:55:49.947430 22536125589312 checkpoints.py:490] Saving checkpoint at step: 20000
+I0511 05:55:49.989627 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_20000
+I0511 06:47:06.034808 22536125589312 checkpoints.py:490] Saving checkpoint at step: 30000
+I0511 06:47:06.065790 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_30000
+I0511 07:38:16.280926 22536125589312 checkpoints.py:490] Saving checkpoint at step: 40000
+I0511 07:38:16.356622 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_40000
+I0511 08:29:26.372737 22536125589312 checkpoints.py:490] Saving checkpoint at step: 50000
+I0511 08:29:26.403365 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_50000
+I0511 09:20:35.630306 22536125589312 checkpoints.py:490] Saving checkpoint at step: 60000
+I0511 09:20:35.668028 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_60000
+I0511 10:11:34.633407 22536125589312 checkpoints.py:490] Saving checkpoint at step: 70000
+I0511 10:11:34.662619 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_70000
+I0511 11:02:32.400862 22536125589312 checkpoints.py:490] Saving checkpoint at step: 80000
+I0511 11:02:32.431360 22536125589312 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_80000
+2023-05-11 11:27:59.125076: W tensorflow/core/framework/op_kernel.cc:1830] OP_REQUIRES failed at summary_kernels.cc:150 : UNKNOWN: /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/events.out.tfevents.1683792701.adroit-h11g2.2779055.0.v2; Input/output error
+	Failed to flush 1 events to /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/events.out.tfevents.1683792701.adroit-h11g2.2779055.0.v2
+	Could not flush events file.
+Traceback (most recent call last):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 288, in <module>
+    app.run(main)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 165, in main
+    summary_writer.histogram('train_' + k, v, step)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/metrics/tensorboard.py", line 185, in histogram
+    tf.summary.histogram(name=tag, data=values, step=step, buckets=bins)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/tensorboard/plugins/histogram/summary_v2.py", line 196, in histogram
+    return tf.summary.write(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/tensorflow/python/ops/summary_ops_v2.py", line 769, in write
+    op = smart_cond.smart_cond(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/tensorflow/python/framework/smart_cond.py", line 52, in smart_cond
+    return true_fn()
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/tensorflow/python/ops/summary_ops_v2.py", line 759, in record
+    write_summary_op = gen_summary_ops.write_summary(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/tensorflow/python/ops/gen_summary_ops.py", line 700, in write_summary
+    return write_summary_eager_fallback(
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/tensorflow/python/ops/gen_summary_ops.py", line 720, in write_summary_eager_fallback
+    _result = _execute.execute(b"WriteSummary", 0, inputs=_inputs_flat,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/tensorflow/python/eager/execute.py", line 52, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.UnknownError: {{function_node __wrapped__WriteSummary_device_/job:localhost/replica:0/task:0/device:CPU:0}} /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/events.out.tfevents.1683792701.adroit-h11g2.2779055.0.v2; Input/output error
+	Failed to flush 1 events to /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/events.out.tfevents.1683792701.adroit-h11g2.2779055.0.v2
+	Could not flush events file. [Op:WriteSummary]
+Number of parameters being optimized: 1132302
+      1/350000: loss=0.11309, psnr= 9.893, lr=2.22e-06 | data=0.11272, orie=4.5e-05, pred=0.00032, 641584 r/s
+   5000/350000: loss=0.03260, psnr=15.889, lr=1.64e-04 | data=0.03237, orie=4.7e-05, pred=0.00018, 14916 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 5000: 31.251s., 20480 rays/sec
+Metrics computed in 1.726s
+psnr = 11.5153
+ssim = 0.2478
+Visualized in 13.444s
+  10000/350000: loss=0.01605, psnr=18.610, lr=1.59e-04 | data=0.01588, orie=3.6e-06, pred=0.00016, 14912 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 10000: 17.236s., 37132 rays/sec
+Metrics computed in 0.005s
+psnr = 11.6645
+ssim = 0.2491
+Visualized in 0.672s
+  15000/350000: loss=0.01324, psnr=19.493, lr=1.54e-04 | data=0.01307, orie=3.9e-06, pred=0.00016, 14957 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 15000: 17.383s., 36818 rays/sec
+Metrics computed in 0.004s
+psnr = 11.7736
+ssim = 0.2548
+Visualized in 0.643s
+  20000/350000: loss=0.01175, psnr=20.025, lr=1.49e-04 | data=0.01159, orie=3.4e-06, pred=0.00016, 14892 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 20000: 17.302s., 36989 rays/sec
+Metrics computed in 0.004s
+psnr = 11.3153
+ssim = 0.5874
+Visualized in 0.651s
+  25000/350000: loss=0.01092, psnr=20.356, lr=1.44e-04 | data=0.01076, orie=3.0e-06, pred=0.00016, 14957 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 25000: 17.242s., 37119 rays/sec
+Metrics computed in 0.004s
+psnr = 11.6521
+ssim = 0.2532
+Visualized in 0.640s
+  30000/350000: loss=0.01042, psnr=20.577, lr=1.40e-04 | data=0.01027, orie=3.1e-06, pred=0.00015, 14941 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 30000: 17.246s., 37111 rays/sec
+Metrics computed in 0.005s
+psnr = 11.6303
+ssim = 0.2544
+Visualized in 0.696s
+  35000/350000: loss=0.00982, psnr=20.851, lr=1.35e-04 | data=0.00967, orie=2.4e-06, pred=0.00015, 14975 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 35000: 17.316s., 36960 rays/sec
+Metrics computed in 0.004s
+psnr = 11.6098
+ssim = 0.2513
+Visualized in 0.627s
+  40000/350000: loss=0.00937, psnr=21.067, lr=1.31e-04 | data=0.00922, orie=2.8e-06, pred=0.00015, 14942 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 40000: 17.212s., 37184 rays/sec
+Metrics computed in 0.004s
+psnr = 10.6957
+ssim = 0.5552
+Visualized in 0.650s
+  45000/350000: loss=0.00892, psnr=21.295, lr=1.26e-04 | data=0.00877, orie=2.3e-06, pred=0.00015, 14978 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 45000: 17.221s., 37165 rays/sec
+Metrics computed in 0.004s
+psnr = 11.5515
+ssim = 0.2518
+Visualized in 0.656s
+  50000/350000: loss=0.00852, psnr=21.516, lr=1.22e-04 | data=0.00836, orie=2.6e-06, pred=0.00015, 14944 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 50000: 17.229s., 37147 rays/sec
+Metrics computed in 0.004s
+psnr = 10.6475
+ssim = 0.5392
+Visualized in 0.638s
+  55000/350000: loss=0.00816, psnr=21.722, lr=1.18e-04 | data=0.00801, orie=2.3e-06, pred=0.00015, 14960 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 55000: 17.185s., 37241 rays/sec
+Metrics computed in 0.005s
+psnr = 10.6892
+ssim = 0.5332
+Visualized in 0.626s
+  60000/350000: loss=0.00783, psnr=21.916, lr=1.15e-04 | data=0.00767, orie=2.1e-06, pred=0.00015, 14939 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 60000: 17.187s., 37236 rays/sec
+Metrics computed in 0.005s
+psnr = 10.7422
+ssim = 0.5295
+Visualized in 0.609s
+  65000/350000: loss=0.00727, psnr=22.248, lr=1.11e-04 | data=0.00711, orie=2.4e-06, pred=0.00015, 14987 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 65000: 17.207s., 37193 rays/sec
+Metrics computed in 0.005s
+psnr = 10.8277
+ssim = 0.5275
+Visualized in 0.664s
+  70000/350000: loss=0.00688, psnr=22.506, lr=1.07e-04 | data=0.00672, orie=2.2e-06, pred=0.00015, 14975 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 70000: 17.170s., 37274 rays/sec
+Metrics computed in 0.006s
+psnr = 10.8548
+ssim = 0.5298
+Visualized in 0.708s
+  75000/350000: loss=0.00654, psnr=22.724, lr=1.04e-04 | data=0.00639, orie=2.2e-06, pred=0.00015, 14999 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 75000: 17.157s., 37302 rays/sec
+Metrics computed in 0.004s
+psnr = 10.9132
+ssim = 0.5263
+Visualized in 0.599s
+  80000/350000: loss=0.00628, psnr=22.913, lr=1.00e-04 | data=0.00613, orie=2.2e-06, pred=0.00015, 14963 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 80000: 17.251s., 37098 rays/sec
+Metrics computed in 0.004s
+psnr = 10.9814
+ssim = 0.5242
+Visualized in 0.628s
+2023-05-11 11:28:12.646488: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 11:28:12.646541: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 11:28:12.646547: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0511 11:28:15.161012 23266829883200 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Host Interpreter CUDA
+I0511 11:28:15.161397 23266829883200 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0511 11:28:15.161456 23266829883200 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0511 11:28:45.915139 23266829883200 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_1
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+slurmstepd: error: *** JOB 1767275 ON adroit-h11g2 CANCELLED AT 2023-05-11T11:30:20 ***

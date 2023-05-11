@@ -70,7 +70,6 @@ class LETransformer(nn.Module):
             )
         if tokens.shape[0] != light_probes.shape[0]:
             light_probes = jnp.repeat(light_probes, tokens.shape[0], axis=0)
-        breakpoint()
         x = EncoderBlock(
             input_dim=self.dim,
             num_heads=self.num_heads,

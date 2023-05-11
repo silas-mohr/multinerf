@@ -1,0 +1,89 @@
+Wed May 10 21:02:31 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:14:00.0 Off |                    0 |
+| N/A   32C    P0    25W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:39:00.0 Off |                    0 |
+| N/A   33C    P0    24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/render': Is a directory
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/test_preds': Is a directory
+2023-05-10 21:02:34.114064: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 21:02:34.114140: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 21:02:34.114148: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0510 21:02:36.053723 23202175772480 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Host CUDA Interpreter
+I0510 21:02:36.054104 23202175772480 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0510 21:02:36.054204 23202175772480 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+I0510 21:03:20.108339 23202175772480 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer with prefix checkpoint_
+I0510 21:04:00.794143 23202175772480 checkpoints.py:490] Saving checkpoint at step: 1
+I0510 21:04:00.827780 23202175772480 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_1
+I0510 21:04:57.006301 23202175772480 checkpoints.py:490] Saving checkpoint at step: 250
+I0510 21:04:57.044764 23202175772480 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_250
+I0510 21:05:56.897809 23202175772480 checkpoints.py:490] Saving checkpoint at step: 500
+I0510 21:05:56.941154 23202175772480 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_500
+I0510 21:08:11.910481 23202175772480 checkpoints.py:490] Saving checkpoint at step: 750
+I0510 21:08:11.946021 23202175772480 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_750
+I0510 21:09:11.699603 23202175772480 checkpoints.py:490] Saving checkpoint at step: 1000
+I0510 21:09:11.749498 23202175772480 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_1000
+Number of parameters being optimized: 1132302
+      1/250000: loss=0.09598, psnr=10.611, lr=1.54e-05 | data=0.09556, orie=9.7e-05, pred=0.00032, 2671 r/s
+    100/250000: loss=0.09644, psnr=10.743, lr=5.67e-05 | data=0.09365, orie=0.00247, pred=0.00032, 5726 r/s
+    200/250000: loss=0.07051, psnr=12.082, lr=9.42e-05 | data=0.06990, orie=0.00035, pred=0.00026, 5667 r/s
+    300/250000: loss=0.04804, psnr=13.740, lr=1.24e-04 | data=0.04768, orie=0.00013, pred=0.00023, 5642 r/s
+    400/250000: loss=0.04189, psnr=14.356, lr=1.43e-04 | data=0.04163, orie=3.9e-05, pred=0.00022, 5662 r/s
+    500/250000: loss=0.03845, psnr=14.693, lr=1.49e-04 | data=0.03820, orie=5.0e-05, pred=0.00020, 5663 r/s
+Rendering chunk 0/624
+Rendering chunk 62/624
+Rendering chunk 124/624
+Rendering chunk 186/624
+Rendering chunk 248/624
+Rendering chunk 310/624
+Rendering chunk 372/624
+Rendering chunk 434/624
+Rendering chunk 496/624
+Rendering chunk 558/624
+Rendering chunk 620/624
+Eval 500: 60.038s., 10660 rays/sec
+Metrics computed in 1.529s
+psnr = 14.7425
+ssim = 0.7070
+Visualized in 15.080s
+    600/250000: loss=0.03681, psnr=14.896, lr=1.49e-04 | data=0.03655, orie=5.5e-05, pred=0.00020, 5664 r/s
+    700/250000: loss=0.03466, psnr=15.177, lr=1.49e-04 | data=0.03442, orie=4.5e-05, pred=0.00020, 5663 r/s
+    800/250000: loss=0.03219, psnr=15.461, lr=1.49e-04 | data=0.03196, orie=2.9e-05, pred=0.00020, 5636 r/s
+    900/250000: loss=0.03250, psnr=15.430, lr=1.49e-04 | data=0.03227, orie=2.8e-05, pred=0.00020, 5655 r/s
+   1000/250000: loss=0.03014, psnr=15.738, lr=1.49e-04 | data=0.02993, orie=9.8e-06, pred=0.00020, 5651 r/s
+Rendering chunk 0/624
+Rendering chunk 62/624
+Rendering chunk 124/624
+Rendering chunk 186/624
+Rendering chunk 248/624
+Rendering chunk 310/624
+Rendering chunk 372/624
+Rendering chunk 434/624
+Rendering chunk 496/624
+Rendering chunk 558/624
+Rendering chunk 620/624
+Eval 1000: 50.794s., 12600 rays/sec
+Metrics computed in 0.007s
+psnr = 15.6262
+ssim = 0.7196
+Visualized in 0.724s

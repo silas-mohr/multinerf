@@ -1,0 +1,312 @@
+Thu May 11 11:11:53 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:14:00.0 Off |                    0 |
+| N/A   31C    P0    24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:39:00.0 Off |                    0 |
+| N/A   33C    P0    24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/render': Is a directory
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/test_preds': Is a directory
+2023-05-11 11:11:56.282534: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 11:11:56.282610: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 11:11:56.282618: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0511 11:11:58.215308 23315087693632 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
+I0511 11:11:58.215679 23315087693632 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0511 11:11:58.215772 23315087693632 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+I0511 11:12:42.067316 23315087693632 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer with prefix checkpoint_
+I0511 11:13:36.916785 23315087693632 checkpoints.py:490] Saving checkpoint at step: 1
+I0511 11:13:36.950568 23315087693632 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_1
+2023-05-11 11:18:47.962989: W external/tsl/tsl/framework/bfc_allocator.cc:485] Allocator (GPU_0_bfc) ran out of memory trying to allocate 23.76GiB (rounded to 25516741120)requested by op 
+2023-05-11 11:18:47.966424: E external/xla/xla/service/rendezvous.cc:31] This thread has been waiting for 10 seconds and may be stuck:
+2023-05-11 11:18:48.010653: W external/tsl/tsl/framework/bfc_allocator.cc:497] *___________________________________________________________________________________________________
+2023-05-11 11:18:48.019314: E external/xla/xla/pjrt/pjrt_stream_executor_client.cc:2432] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 25516740872 bytes.
+BufferAssignment OOM Debugging.
+BufferAssignment stats:
+             parameter allocation:   13.14MiB
+              constant allocation:    34.6KiB
+        maybe_live_out allocation:   12.96MiB
+     preallocated temp allocation:   23.76GiB
+  preallocated temp fragmentation:  127.00MiB (0.52%)
+                 total allocation:   23.78GiB
+              total fragmentation:  130.30MiB (0.54%)
+Peak buffers:
+	Buffer 1:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/div" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34 deduplicated_name=fusion.1397
+		XLA Label: fusion
+		Shape: f32[1,1,2048,4,128,128]
+		==========================
+
+	Buffer 2:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 3:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/div" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34 deduplicated_name=fusion.1397
+		XLA Label: fusion
+		Shape: f32[1,1,2048,4,128,128]
+		==========================
+
+	Buffer 4:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 5:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_2/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 6:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_2/MultiHeadDotProductAttention_0/div" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34 deduplicated_name=fusion.1397
+		XLA Label: fusion
+		Shape: f32[1,1,2048,4,128,128]
+		==========================
+
+	Buffer 7:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_2/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 8:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_1/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 9:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_1/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 10:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_0/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 11:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_0/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 12:
+		Size: 352.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/concatenate[dimension=1]" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=375 deduplicated_name=fusion.1844
+		XLA Label: fusion
+		Shape: f32[262144,352]
+		==========================
+
+	Buffer 13:
+		Size: 352.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/concatenate[dimension=1]" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=375 deduplicated_name=fusion.1844
+		XLA Label: fusion
+		Shape: f32[262144,352]
+		==========================
+
+	Buffer 14:
+		Size: 256.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/vmap(jvp(jit(relu)))/max" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=373 deduplicated_name=fusion.1838
+		XLA Label: fusion
+		Shape: f32[262144,256]
+		==========================
+
+	Buffer 15:
+		Size: 256.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/vmap(jvp(jit(relu)))/max" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=373 deduplicated_name=fusion.1838
+		XLA Label: fusion
+		Shape: f32[262144,256]
+		==========================
+
+
+2023-05-11 11:18:58.019639: F external/xla/xla/pjrt/pjrt_stream_executor_client.cc:2577] Replicated computation launch failed, but not all replicas terminated. Aborting process to work around deadlock. Failure message (there may have been multiple failures, see the error log for all failures): 
+
+Out of memory while trying to allocate 25516740872 bytes.
+BufferAssignment OOM Debugging.
+BufferAssignment stats:
+             parameter allocation:   13.14MiB
+              constant allocation:    34.6KiB
+        maybe_live_out allocation:   12.96MiB
+     preallocated temp allocation:   23.76GiB
+  preallocated temp fragmentation:  127.00MiB (0.52%)
+                 total allocation:   23.78GiB
+              total fragmentation:  130.30MiB (0.54%)
+Peak buffers:
+	Buffer 1:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/div" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34 deduplicated_name=fusion.1397
+		XLA Label: fusion
+		Shape: f32[1,1,2048,4,128,128]
+		==========================
+
+	Buffer 2:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 3:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/div" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34 deduplicated_name=fusion.1397
+		XLA Label: fusion
+		Shape: f32[1,1,2048,4,128,128]
+		==========================
+
+	Buffer 4:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_3/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 5:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_2/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 6:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_2/MultiHeadDotProductAttention_0/div" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34 deduplicated_name=fusion.1397
+		XLA Label: fusion
+		Shape: f32[1,1,2048,4,128,128]
+		==========================
+
+	Buffer 7:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_2/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 8:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_1/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 9:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_1/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 10:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_0/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 11:
+		Size: 512.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/LearnedEmbeddings_0/LETransformer_0/EncoderBlock_0/MultiHeadDotProductAttention_0/...qhd,...khd->...hqk/jit(_einsum)/dot_general[dimension_numbers=(((5,), (5,)), ((0, 1, 2, 4), (0, 1, 2, 4))) precision=None preferred_element_type=None]" source_file="/scratch/network/smohr/cos526/multinerf/internal/transformers.py" source_line=34
+		XLA Label: custom-call
+		Shape: f32[2048,4,128,128]
+		==========================
+
+	Buffer 12:
+		Size: 352.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/concatenate[dimension=1]" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=375 deduplicated_name=fusion.1844
+		XLA Label: fusion
+		Shape: f32[262144,352]
+		==========================
+
+	Buffer 13:
+		Size: 352.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/concatenate[dimension=1]" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=375 deduplicated_name=fusion.1844
+		XLA Label: fusion
+		Shape: f32[262144,352]
+		==========================
+
+	Buffer 14:
+		Size: 256.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/vmap(jvp(jit(relu)))/max" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=373 deduplicated_name=fusion.1838
+		XLA Label: fusion
+		Shape: f32[262144,256]
+		==========================
+
+	Buffer 15:
+		Size: 256.00MiB
+		Operator: op_name="pmap(train_step)/jit(main)/jvp(Model)/NerfMLP_0/vmap(jvp(jit(relu)))/max" source_file="/scratch/network/smohr/cos526/multinerf/internal/models.py" source_line=373 deduplicated_name=fusion.1838
+		XLA Label: fusion
+		Shape: f32[262144,256]
+		==========================
+
+
+Fatal Python error: Aborted
+
+Thread 0x000015338c8dc700 (most recent call first):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/threading.py", line 312 in wait
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/queue.py", line 140 in put
+  File "/scratch/network/smohr/cos526/multinerf/internal/datasets.py", line 361 in run
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/threading.py", line 980 in _bootstrap_inner
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/threading.py", line 937 in _bootstrap
+
+Thread 0x000015338c6db700 (most recent call first):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/threading.py", line 312 in wait
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/queue.py", line 140 in put
+  File "/scratch/network/smohr/cos526/multinerf/internal/datasets.py", line 361 in run
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/threading.py", line 980 in _bootstrap_inner
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/threading.py", line 937 in _bootstrap
+
+Current thread 0x0000153477851740 (most recent call first):
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 119 in main
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 254 in _run_main
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 308 in run
+  File "/scratch/network/smohr/cos526/multinerf/train.py", line 288 in <module>
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 87 in _run_code
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 197 in _run_module_as_main
+/var/spool/slurmd/job1767604/slurm_script: line 38: 386711 Aborted                 (core dumped) python -m train --gin_configs=configs/blender_refnerf_small.gin --gin_bindings="Config.data_dir = '${DATA_DIR}/${SCENE}'" --gin_bindings="Config.checkpoint_dir = '${CHECKPOINT_DIR}'" --logtostderr
+2023-05-11 11:19:00.185511: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 11:19:00.185590: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 11:19:00.185598: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0511 11:19:02.145266 23357404837696 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
+I0511 11:19:02.145718 23357404837696 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0511 11:19:02.145812 23357404837696 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0511 11:19:37.744148 23357404837696 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_1
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+slurmstepd: error: *** JOB 1767604 ON adroit-h11g1 CANCELLED AT 2023-05-11T11:30:22 ***

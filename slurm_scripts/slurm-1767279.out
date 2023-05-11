@@ -1,0 +1,144 @@
+Wed May 10 21:20:47 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:14:00.0 Off |                    0 |
+| N/A   31C    P0    24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:39:00.0 Off |                    0 |
+| N/A   33C    P0    24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/render': Is a directory
+rm: cannot remove '/scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/test_preds': Is a directory
+2023-05-10 21:20:50.162493: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 21:20:50.162569: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 21:20:50.162578: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0510 21:20:52.123242 22394538985280 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA Host Interpreter
+I0510 21:20:52.123594 22394538985280 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0510 21:20:52.123686 22394538985280 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+I0510 21:21:33.006389 22394538985280 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer with prefix checkpoint_
+I0510 21:22:08.449272 22394538985280 checkpoints.py:490] Saving checkpoint at step: 1
+I0510 21:22:08.471812 22394538985280 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_1
+I0510 22:02:15.180278 22394538985280 checkpoints.py:490] Saving checkpoint at step: 5000
+I0510 22:02:15.405399 22394538985280 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_5000
+Number of parameters being optimized: 713230
+    1/5000: loss=0.11273, psnr= 9.909, lr=1.95e-06 | data=0.11231, orie=9.0e-05, pred=0.00033, 624745 r/s
+ 5000/5000: loss=0.02751, psnr=16.475, lr=1.50e-05 | data=0.02725, orie=9.4e-05, pred=0.00016, 9733 r/s
+Rendering chunk 0/156
+Rendering chunk 15/156
+Rendering chunk 30/156
+Rendering chunk 45/156
+Rendering chunk 60/156
+Rendering chunk 75/156
+Rendering chunk 90/156
+Rendering chunk 105/156
+Rendering chunk 120/156
+Rendering chunk 135/156
+Rendering chunk 150/156
+Eval 5000: 37.040s., 17278 rays/sec
+Metrics computed in 1.534s
+psnr = 17.8481
+ssim = 0.7089
+Visualized in 14.813s
+2023-05-10 22:02:28.288703: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 22:02:28.288780: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 22:02:28.288789: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0510 22:02:30.216724 23271633323840 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
+I0510 22:02:30.217107 23271633323840 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0510 22:02:30.217195 23271633323840 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0510 22:03:05.862638 23271633323840 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_5000
+Traceback (most recent call last):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/scratch/network/smohr/cos526/multinerf/eval.py", line 262, in <module>
+    app.run(main)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "/scratch/network/smohr/cos526/multinerf/eval.py", line 73, in main
+    state = checkpoints.restore_checkpoint(config.checkpoint_dir, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/training/checkpoints.py", line 990, in restore_checkpoint
+    restored_checkpoint = serialization.from_state_dict(target, state_dict)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/struct.py", line 156, in from_state_dict
+    updates[name] = serialization.from_state_dict(value, value_state, name=name)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in _restore_frozen_dict
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in <dictcomp>
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in _restore_frozen_dict
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in <dictcomp>
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 307, in _restore_frozen_dict
+    raise ValueError('The target dict keys and state dict keys do not match,'
+ValueError: The target dict keys and state dict keys do not match, target dict contains keys {'LearnedEmbeddings_0'} which are not present in state dict at path ./params/params/NerfMLP_0
+2023-05-10 22:03:08.483405: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 22:03:08.483480: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-10 22:03:08.483489: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0510 22:03:10.483579 23193200240448 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA Interpreter Host
+I0510 22:03:10.483950 23193200240448 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0510 22:03:10.484041 23193200240448 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0510 22:03:46.034354 23193200240448 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster_transformer/checkpoint_5000
+Traceback (most recent call last):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/scratch/network/smohr/cos526/multinerf/render.py", line 204, in <module>
+    app.run(main)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "/scratch/network/smohr/cos526/multinerf/render.py", line 112, in main
+    state = checkpoints.restore_checkpoint(config.checkpoint_dir, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/training/checkpoints.py", line 990, in restore_checkpoint
+    restored_checkpoint = serialization.from_state_dict(target, state_dict)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/struct.py", line 156, in from_state_dict
+    updates[name] = serialization.from_state_dict(value, value_state, name=name)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in _restore_frozen_dict
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in <dictcomp>
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in _restore_frozen_dict
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in <dictcomp>
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 307, in _restore_frozen_dict
+    raise ValueError('The target dict keys and state dict keys do not match,'
+ValueError: The target dict keys and state dict keys do not match, target dict contains keys {'LearnedEmbeddings_0'} which are not present in state dict at path ./params/params/NerfMLP_0

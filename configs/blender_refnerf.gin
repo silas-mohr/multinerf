@@ -53,4 +53,3 @@ NerfMLP.use_transformers = True
 
 LearnedEmbeddings.num_light_probes = 128  # Should match net_width_viewdirs, 128 is default
 LearnedEmbeddings.lp_dim = 128
-# LearnedEmbeddings.lp_dim = 256  # This is the default, just making sure it is configurable
