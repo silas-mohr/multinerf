@@ -66,10 +66,11 @@ class LETransformer(nn.Module):
     def __call__(self, tokens, light_probes, class_token) -> Any:
         if len(tokens.shape) != len(light_probes.shape):
             light_probes = jnp.expand_dims(
-                light_probes, axis=tuple(range(1, len(tokens.shape)))
+                light_probes, axis=tuple(range(0, len(tokens.shape) - 3))
             )
         if tokens.shape[0] != light_probes.shape[0]:
             light_probes = jnp.repeat(light_probes, tokens.shape[0], axis=0)
+        breakpoint()
         x = EncoderBlock(
             input_dim=self.dim,
             num_heads=self.num_heads,
