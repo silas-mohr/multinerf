@@ -469,7 +469,7 @@ class MLP(nn.Module):
 
                 # Output of the second part of MLP. i.e. the directional MLP or transformer block
                 if self.use_transformers:
-                    x = transformers.LearnedEmbeddings()(x, viewdirs)
+                    x = transformers.LearnedEmbeddings()(x, viewdirs[..., None, :])
                 else:
                     inputs = x
                     for i in range(self.net_depth_viewdirs):

@@ -28,8 +28,6 @@ class EncoderBlock(nn.Module):
 
     @nn.compact
     def __call__(self, x, kv, mask=None):
-        if len(kv.shape) != len(x.shape):
-            x = jnp.repeat(x[None, None, ...], kv.shape[0], axis=0)
         dense_layer = functools.partial(
             nn.Dense, kernel_init=getattr(jax.nn.initializers, self.weight_init)()
         )
@@ -66,6 +64,12 @@ class LETransformer(nn.Module):
 
     @nn.compact
     def __call__(self, tokens, light_probes, class_token) -> Any:
+        if len(tokens.shape) != len(light_probes.shape):
+            light_probes = jnp.expand_dims(
+                light_probes, axis=tuple(range(1, len(tokens.shape)))
+            )
+        if tokens.shape[0] != light_probes.shape[0]:
+            light_probes = jnp.repeat(light_probes, tokens.shape[0], axis=0)
         x = EncoderBlock(
             input_dim=self.dim,
             num_heads=self.num_heads,
@@ -82,7 +86,7 @@ class LETransformer(nn.Module):
             )(x, x)
 
         view_token = jnp.repeat(
-            class_token[..., None, :], 128, axis=len(tokens.shape) - 2
+            class_token, tokens.shape[-2], axis=len(tokens.shape) - 2
         )
         x = EncoderBlock(
             input_dim=self.dim,
