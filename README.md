@@ -5,6 +5,8 @@ This implementation is written in [JAX](https://github.com/google/jax), and
 is a fork of [multiNeRF](https://github.com/google-research/multinerf.git).
 This is research code, and should be treated accordingly.
 
+To view some video results go [here](https://drive.google.com/drive/folders/1A9_2CQt5Faf9mzR9tt7YjIXED_SbvMUY?usp=sharing).
+
 ## Setup on Princeton's Adroit Cluster
 
 ```
