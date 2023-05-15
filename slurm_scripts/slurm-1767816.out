@@ -1,0 +1,172 @@
+Thu May 11 13:42:48 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:9B:00.0 Off |                    0 |
+| N/A   36C    P0    26W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:C8:00.0 Off |                    0 |
+| N/A   35C    P0    26W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+2023-05-11 13:43:01.986415: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 13:43:01.986501: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 13:43:01.986511: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0511 13:43:03.796159 22820494956352 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
+I0511 13:43:03.796535 22820494956352 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0511 13:43:03.796602 22820494956352 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0511 13:43:44.820568 22820494956352 checkpoints.py:924] Restoring legacy Flax checkpoint from /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/toaster/checkpoint_300000
+Traceback (most recent call last):
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/scratch/network/smohr/cos526/multinerf/eval.py", line 262, in <module>
+    app.run(main)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "/scratch/network/smohr/cos526/multinerf/eval.py", line 73, in main
+    state = checkpoints.restore_checkpoint(config.checkpoint_dir, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/training/checkpoints.py", line 990, in restore_checkpoint
+    restored_checkpoint = serialization.from_state_dict(target, state_dict)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/struct.py", line 156, in from_state_dict
+    updates[name] = serialization.from_state_dict(value, value_state, name=name)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in _restore_frozen_dict
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in <dictcomp>
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in _restore_frozen_dict
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 312, in <dictcomp>
+    {key: serialization.from_state_dict(value, states[key], name=key)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/serialization.py", line 92, in from_state_dict
+    return ty_from_state_dict(target, state)
+  File "/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/flax/core/frozen_dict.py", line 307, in _restore_frozen_dict
+    raise ValueError('The target dict keys and state dict keys do not match,'
+ValueError: The target dict keys and state dict keys do not match, target dict contains keys {'LearnedEmbeddings_0'} which are not present in state dict at path ./params/params/NerfMLP_0
+2023-05-11 13:43:51.358775: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 13:43:51.358863: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-11 13:43:51.358872: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0511 13:43:53.093744 22528700589888 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Host CUDA Interpreter
+I0511 13:43:53.094252 22528700589888 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0511 13:43:53.094327 22528700589888 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0511 13:44:25.182358 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:44:35.213199 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:44:45.225497 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:44:55.231415 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:45:05.242872 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:45:15.249101 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:45:25.260427 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:45:35.267009 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:45:45.278195 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:45:55.284879 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:46:05.296309 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:46:15.302199 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:46:25.313063 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:46:35.318804 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:46:45.330539 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:46:55.358840 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:47:05.394948 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:47:15.407772 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:47:25.412489 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:47:35.425354 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:47:45.429872 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:47:55.443545 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:48:05.447588 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:48:15.460792 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:48:25.464678 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:48:35.478302 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:48:45.481864 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:48:55.496631 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:49:05.499445 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:49:15.514400 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:49:25.517416 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:49:35.532391 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:49:45.535149 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:49:55.550802 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:50:05.552831 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:50:15.568639 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:50:25.570543 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:50:35.586604 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:50:45.588292 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:50:55.606896 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:51:05.657485 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:51:15.664514 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:51:25.681920 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:51:35.732616 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:51:45.741497 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:51:55.759120 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:52:05.809864 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:52:15.816775 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:52:25.835363 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:52:35.886119 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:52:45.893633 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:52:55.913095 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:53:05.963946 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:53:15.970663 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:53:25.989487 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:53:36.040426 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:53:46.048028 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:53:56.066523 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:54:06.091707 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:54:16.125019 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:54:26.143723 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:54:36.192366 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:54:46.202309 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:54:56.221706 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:55:06.272560 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:55:16.279789 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:55:26.298467 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:55:36.349287 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:55:46.357055 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:55:56.375498 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:56:06.426270 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:56:16.434126 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:56:26.452035 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:56:36.502860 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:56:46.512031 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:56:56.529951 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:57:06.580673 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:57:16.588465 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:57:26.606316 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:57:36.656995 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:57:46.665891 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:57:56.683524 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:58:06.734212 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:58:16.742205 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:58:26.760026 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:58:36.810555 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:58:46.819263 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:58:56.837573 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:59:06.888604 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:59:16.896203 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:59:26.913062 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:59:36.914048 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:59:46.931635 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 13:59:56.982787 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 14:00:06.991224 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 14:00:17.008414 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 14:00:27.059124 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0511 14:00:37.067762 22528700589888 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+slurmstepd: error: *** JOB 1767816 ON adroit-h11g3 CANCELLED AT 2023-05-11T14:00:38 ***

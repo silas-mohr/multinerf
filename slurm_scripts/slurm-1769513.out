@@ -1,0 +1,58 @@
+Sun May 14 03:10:24 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.60.13    Driver Version: 525.60.13    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  On   | 00000000:17:00.0 Off |                    0 |
+| N/A   27C    P0    31W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA A100-PCI...  On   | 00000000:65:00.0 Off |                    0 |
+| N/A   31C    P0    33W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+2023-05-14 03:10:28.066066: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-14 03:10:28.066122: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cudnn/cuda-11.5/8.3.2/lib64:/usr/local/cuda-11.7/lib64
+2023-05-14 03:10:28.066129: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+I0514 03:10:30.586730 23232843048768 xla_bridge.py:440] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
+I0514 03:10:30.587211 23232843048768 xla_bridge.py:440] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0514 03:10:30.587286 23232843048768 xla_bridge.py:440] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+/scratch/network/smohr/multinerf-env/lib/python3.9/site-packages/jax/_src/xla_bridge.py:643: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+I0514 03:11:00.797838 23232843048768 checkpoints.py:915] Found no checkpoint files in /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball with prefix checkpoint_
+I0514 03:11:33.660328 23232843048768 checkpoints.py:490] Saving checkpoint at step: 1
+I0514 03:11:33.686399 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_1
+I0514 04:02:34.968629 23232843048768 checkpoints.py:490] Saving checkpoint at step: 10000
+I0514 04:02:35.013011 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_10000
+I0514 04:53:30.875423 23232843048768 checkpoints.py:490] Saving checkpoint at step: 20000
+I0514 04:53:30.915160 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_20000
+I0514 05:44:22.609035 23232843048768 checkpoints.py:490] Saving checkpoint at step: 30000
+I0514 05:44:22.642286 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_30000
+I0514 06:35:03.300134 23232843048768 checkpoints.py:490] Saving checkpoint at step: 40000
+I0514 06:35:03.330759 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_40000
+I0514 07:25:40.841449 23232843048768 checkpoints.py:490] Saving checkpoint at step: 50000
+I0514 07:25:40.870370 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_50000
+I0514 08:16:16.791874 23232843048768 checkpoints.py:490] Saving checkpoint at step: 60000
+I0514 08:16:16.819828 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_60000
+I0514 09:06:49.192694 23232843048768 checkpoints.py:490] Saving checkpoint at step: 70000
+I0514 09:06:49.220529 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_70000
+I0514 09:57:20.152517 23232843048768 checkpoints.py:490] Saving checkpoint at step: 80000
+I0514 09:57:20.182240 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_80000
+I0514 10:47:46.991287 23232843048768 checkpoints.py:490] Saving checkpoint at step: 90000
+I0514 10:47:47.018849 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_90000
+I0514 11:38:13.761363 23232843048768 checkpoints.py:490] Saving checkpoint at step: 100000
+I0514 11:38:13.999142 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_100000
+I0514 12:28:42.393797 23232843048768 checkpoints.py:490] Saving checkpoint at step: 110000
+I0514 12:28:42.422246 23232843048768 checkpoints.py:422] Saved checkpoint at /scratch/network/smohr/cos526/multinerf/checkpoints/shinyblender/ball/checkpoint_110000
+slurmstepd: error: *** JOB 1769513 ON adroit-h11g2 CANCELLED AT 2023-05-14T12:40:20 ***

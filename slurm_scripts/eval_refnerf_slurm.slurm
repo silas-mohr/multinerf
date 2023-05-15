@@ -22,7 +22,7 @@ mkdir -p ${ScratchDir}
 
 export CUDA_VISIBLE_DEVICES=0,1
 
-SCENE=toaster
+SCENE=ball
 EXPERIMENT=shinyblender
 DATA_DIR="/tmp/ref-nerf/data"  # create a name for the directory
 mkdir -p ${DATA_DIR}           # make the directory
@@ -37,13 +37,13 @@ python -m eval \
   --logtostderr
 
 
-SCENE=ball
-cp -r /scratch/network/"${USER}"/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
-CHECKPOINT_DIR=/scratch/network/"${USER}"/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
-mkdir -p ${CHECKPOINT_DIR}
+# SCENE=ball
+# cp -r /scratch/network/"${USER}"/cos526/multinerf/data/refnerf/"${SCENE}" ${DATA_DIR}
+# CHECKPOINT_DIR=/scratch/network/"${USER}"/cos526/multinerf/checkpoints/"${EXPERIMENT}"/"${SCENE}"
+# mkdir -p ${CHECKPOINT_DIR}
 
-python -m eval \
-  --gin_configs=configs/blender_refnerf.gin \
-  --gin_bindings="Config.data_dir = '${DATA_DIR}/${SCENE}'" \
-  --gin_bindings="Config.checkpoint_dir = '${CHECKPOINT_DIR}'" \
-  --logtostderr
+# python -m eval \
+#   --gin_configs=configs/blender_refnerf.gin \
+#   --gin_bindings="Config.data_dir = '${DATA_DIR}/${SCENE}'" \
+#   --gin_bindings="Config.checkpoint_dir = '${CHECKPOINT_DIR}'" \
+#   --logtostderr
